@@ -524,10 +524,343 @@
   <footer class="max-w-3xl mx-auto text-center text-xs text-gray-500 mt-8 mb-4 px-4">
     <p><strong>Wichtiger Hinweis (Haftungsausschluss):</strong><br>
     Dieses Tool dient ausschließlich zu Übungs- und Schulungszwecken. Die dargestellten Fälle, Werte und Erklärungen sind nicht zur Stellung medizinischer Diagnosen oder als Ersatz für professionellen medizinischen Rat, eine Diagnose oder eine Behandlung gedacht. Die Nutzung erfolgt auf eigene Gefahr. Es wird keine Haftung für die Richtigkeit oder Vollständigkeit der Inhalte übernommen.</p>
-    <p class="mt-4 text-gray-400" style="font-size: 0.65rem;">Version 1.1 | Sprint 1 Complete | <span id="dev-mode" style="cursor: help;" title="Shift+Klick für Entwickler-Optionen">🔧</span></p>
+    <p class="mt-4">
+      <a href="#" onclick="showImpressum(); return false;" class="text-gray-600 hover:text-gray-800 underline">Impressum</a> • 
+      <a href="#" onclick="showDatenschutz(); return false;" class="text-gray-600 hover:text-gray-800 underline">Datenschutz</a> • 
+      <a href="#" onclick="showNutzungsbedingungen(); return false;" class="text-gray-600 hover:text-gray-800 underline">Nutzungsbedingungen</a>
+    </p>
+    <p class="mt-4 text-gray-400" style="font-size: 0.65rem;">© 2025 Martin Damke | IpW GmbH – Institut für pflegerische Weiterbildung | <span id="dev-mode" style="cursor: help;" title="Shift+Klick für Entwickler-Optionen">🔧</span></p>
   </footer>
 
   <script>
+    // Zeigt das Impressum-Modal
+    function showImpressum() {
+      const modal = createLegalModal('Impressum', `
+        <div style="text-align: left; line-height: 1.8;">
+          <h3 style="color: #1f2937; margin-bottom: 16px;">Angaben gemäß § 5 TMG</h3>
+          
+          <p style="margin-bottom: 20px;">
+            <strong>IpW GmbH</strong><br>
+            Institut für pflegerische Weiterbildung<br>
+            Angerer Str. 2<br>
+            83346 Bergen<br>
+            Deutschland
+          </p>
+          
+          <p style="margin-bottom: 20px;">
+            <strong>Kontakt:</strong><br>
+            Telefon: 0 86 62 – 48 59 38<br>
+            Fax: 0 86 62 – 48 58 01<br>
+            E-Mail: <a href="mailto:info@ipw-schulungen.de" style="color: #4F6BFF;">info@ipw-schulungen.de</a><br>
+            Web: <a href="https://www.ipw-schulungen.de" target="_blank" style="color: #4F6BFF;">www.ipw-schulungen.de</a>
+          </p>
+          
+          <p style="margin-bottom: 20px;">
+            <strong>Vertretungsberechtigte Geschäftsführer:</strong><br>
+            Tania Keese<br>
+            Manfred Vavrinek
+          </p>
+          
+          <p style="margin-bottom: 20px;">
+            <strong>Inhaltlich verantwortlich gemäß § 55 Abs. 2 RStV:</strong><br>
+            IpW GmbH<br>
+            vertreten durch die Geschäftsführer
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">Haftungsausschluss</h3>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Haftung für Inhalte</strong><br>
+            Die Inhalte dieses Tools wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Medizinischer Haftungsausschluss</strong><br>
+            Dieses Tool dient ausschließlich zu Schulungs- und Übungszwecken. Es ersetzt keine medizinische oder pflegerische Ausbildung, keine berufliche Zulassung und keine klinische Erfahrung. Die Nutzung erfolgt auf eigene Verantwortung. Für Schäden, die durch fehlerhafte Anwendung des erlernten Wissens entstehen, übernehmen wir keine Haftung.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Urheberrecht</strong><br>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesem Tool unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
+        </div>
+      `);
+      document.body.appendChild(modal);
+    }
+    
+    // Zeigt das Datenschutz-Modal
+    function showDatenschutz() {
+      const modal = createLegalModal('Datenschutzerklärung', `
+        <div style="text-align: left; line-height: 1.8;">
+          <h3 style="color: #1f2937; margin-bottom: 16px;">1. Datenschutz auf einen Blick</h3>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Allgemeine Hinweise</strong><br>
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie dieses Tool nutzen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+          </p>
+          
+          <p style="margin-bottom: 20px;">
+            <strong>Verantwortliche Stelle</strong><br>
+            IpW GmbH – Institut für pflegerische Weiterbildung<br>
+            Angerer Str. 2, 83346 Bergen<br>
+            Telefon: 0 86 62 – 48 59 38<br>
+            E-Mail: info@ipw-schulungen.de
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">2. Datenerfassung beim BGA-Trainer Pro</h3>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>LocalStorage (Lernfortschritt)</strong><br>
+            Dieses Tool speichert Ihren individuellen Lernfortschritt ausschließlich lokal in Ihrem Browser (sogenannter "LocalStorage"). Diese Daten umfassen:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Fall-IDs der von Ihnen bearbeiteten Aufgaben</li>
+            <li>Zeitstempel Ihrer Versuche</li>
+            <li>Ihre Antworten und deren Richtigkeit</li>
+            <li>Statistische Auswertungen (Erfolgsquoten, Fehlerraten)</li>
+          </ul>
+          <p style="margin-bottom: 16px;">
+            <strong>Wichtig:</strong> Es werden keine personenbezogenen Daten wie Name, E-Mail-Adresse oder IP-Adresse gespeichert. Die Daten verlassen niemals Ihren Computer und werden nicht an unsere Server oder Dritte übertragen. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung der Tool-Funktionalität).
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Zertifikatsgenerierung</strong><br>
+            Wenn Sie ein Fortbildungszertifikat erstellen, werden Sie aufgefordert, Ihren Namen einzugeben. Dieser Name wird:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Ausschließlich zur Erstellung des PDF-Dokuments verwendet</li>
+            <li>Nicht gespeichert (weder im LocalStorage noch auf Servern)</li>
+            <li>Nach der PDF-Generierung aus dem Arbeitsspeicher gelöscht</li>
+          </ul>
+          <p style="margin-bottom: 16px;">
+            Die Namenseingabe erfolgt freiwillig. Sie können das Tool ohne Zertifikatsgenerierung nutzen, dann werden überhaupt keine personenbezogenen Daten verarbeitet. Rechtsgrundlage für die temporäre Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Maßnahmen).
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Externe Dienste (QR-Code)</strong><br>
+            Bei der Generierung eines Zertifikats wird ein QR-Code über die API des externen Dienstes "qrserver.com" geladen. Dabei kann Ihre IP-Adresse an diesen Drittanbieter übermittelt werden. Wir haben keinen Einfluss darauf, ob und wie qrserver.com diese Daten verarbeitet. Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an der Bereitstellung einer Validierungsfunktion (Art. 6 Abs. 1 lit. f DSGVO).
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">3. Ihre Rechte</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Sie haben folgende Rechte bezüglich Ihrer Daten:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li><strong>Auskunft:</strong> Sie können jederzeit unentgeltlich Auskunft über die bei uns gespeicherten Daten erhalten.</li>
+            <li><strong>Löschung:</strong> Sie können Ihre im LocalStorage gespeicherten Lerndaten jederzeit selbst löschen (Shift+Klick auf das Werkzeug-Symbol im Footer, dann "Fortschritt löschen"). Alternativ werden die Daten beim Löschen des Browser-Caches automatisch entfernt.</li>
+            <li><strong>Widerspruch:</strong> Sie können der Verarbeitung Ihrer Daten jederzeit widersprechen, indem Sie das Tool nicht mehr nutzen und Ihre LocalStorage-Daten löschen.</li>
+            <li><strong>Beschwerde:</strong> Sie haben das Recht, sich bei der zuständigen Datenschutz-Aufsichtsbehörde zu beschweren.</li>
+          </ul>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">4. Keine Cookies, kein Tracking</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Dieses Tool verwendet keine Cookies und kein Tracking. Es gibt keine Analyse-Tools wie Google Analytics, keine Werbe-Tracker und keine Social-Media-Plugins. Ihre Nutzung wird nicht überwacht oder analysiert.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">5. Datensicherheit</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Da alle Daten ausschließlich lokal in Ihrem Browser gespeichert werden, liegt die Sicherheit dieser Daten in Ihrer Verantwortung. Wir empfehlen:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Nutzen Sie das Tool nur auf vertrauenswürdigen Geräten</li>
+            <li>Halten Sie Ihren Browser aktuell</li>
+            <li>Verwenden Sie keine öffentlichen Computer für persönliche Zertifikate</li>
+          </ul>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">6. Änderungen dieser Datenschutzerklärung</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtssituationen oder bei Änderungen des Tools anzupassen. Die jeweils aktuelle Fassung finden Sie über den Link "Datenschutz" im Footer des Tools.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Stand:</strong> Januar 2025
+          </p>
+        </div>
+      `);
+      document.body.appendChild(modal);
+    }
+    
+    // Zeigt das Nutzungsbedingungen-Modal
+    function showNutzungsbedingungen() {
+      const modal = createLegalModal('Nutzungsbedingungen', `
+        <div style="text-align: left; line-height: 1.8;">
+          <p style="margin-bottom: 16px; font-size: 15px; background: #fef3c7; padding: 12px; border-radius: 6px; border-left: 4px solid #f59e0b;">
+            <strong>Wichtig:</strong> Durch die Nutzung des BGA-Trainer Pro Tools erklären Sie sich mit den folgenden Nutzungsbedingungen einverstanden.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">1. Geltungsbereich und Zweck</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Diese Nutzungsbedingungen regeln die Verwendung des BGA-Trainer Pro, einem digitalen Trainingssystem zur Übung und Vertiefung der Blutgasanalyse (BGA). Das Tool wird von der IpW GmbH – Institut für pflegerische Weiterbildung, Bergen, bereitgestellt.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            Das Tool dient ausschließlich Bildungs-, Schulungs- und Übungszwecken für Pflegefachpersonen und medizinisches Personal. Es ist nicht für die Anwendung in der direkten Patientenversorgung, für medizinische Diagnosen oder therapeutische Entscheidungen bestimmt.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">2. Medizinischer Haftungsausschluss</h3>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Keine medizinische Beratung:</strong> Die in diesem Tool bereitgestellten Informationen, Fallbeispiele und Erklärungen stellen keine medizinische, pflegerische oder therapeutische Beratung dar. Sie ersetzen nicht:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Eine qualifizierte medizinische oder pflegerische Ausbildung</li>
+            <li>Klinische Erfahrung und Expertise</li>
+            <li>Die individuelle Beurteilung durch medizinisches Fachpersonal</li>
+            <li>Gesetzlich vorgeschriebene Weiterbildungen oder Zulassungen</li>
+            <li>Aktuelle medizinische Leitlinien und Standards</li>
+          </ul>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Keine Gewähr für Richtigkeit:</strong> Obwohl die Inhalte mit größter Sorgfalt und nach aktuellen wissenschaftlichen Erkenntnissen erstellt wurden, übernehmen wir keine Gewähr für deren Richtigkeit, Vollständigkeit, Aktualität oder Eignung für einen bestimmten Zweck. Medizinisches Wissen entwickelt sich ständig weiter, und nicht alle Inhalte können jederzeit auf dem neuesten Stand sein.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Keine Haftung für Anwendungsfehler:</strong> Wir übernehmen keine Haftung für Schäden, die durch die Anwendung des in diesem Tool vermittelten Wissens in der praktischen Arbeit entstehen. Die Verantwortung für korrekte medizinische und pflegerische Entscheidungen liegt ausschließlich beim behandelnden Fachpersonal vor Ort.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">3. Fortbildungszertifikate</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Die vom Tool ausgestellten Fortbildungszertifikate dokumentieren die eigenständige Bearbeitung von Lerneinheiten im Selbststudium. Sie stellen <strong>keine staatlich anerkannten Qualifikationen</strong> oder Prüfungszeugnisse dar und berechtigen nicht zur Ausübung bestimmter Tätigkeiten.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            Die Anerkennung der Zertifikate als Fortbildungsnachweis liegt im Ermessen der jeweiligen:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Registrierungsstellen für Pflegeberufe</li>
+            <li>Pflegekammern</li>
+            <li>Arbeitgeber</li>
+            <li>Weiterbildungsträger</li>
+          </ul>
+          
+          <p style="margin-bottom: 16px;">
+            Die angegebenen Zeitangaben auf den Zertifikaten (Unterrichtseinheiten) basieren auf durchschnittlichen Bearbeitungszeiten und können individuell abweichen. Sie sind als Richtwerte zu verstehen.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">4. Nutzungsrechte und Urheberrecht</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Alle Inhalte dieses Tools (Texte, Fallbeispiele, Grafiken, Software) sind urheberrechtlich geschützt und Eigentum der IpW GmbH bzw. ihrer Lizenzgeber. Sie dürfen das Tool für Ihre persönliche Weiterbildung nutzen, jedoch nicht:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Inhalte kopieren, vervielfältigen oder verbreiten</li>
+            <li>Das Tool oder Teile davon kommerziell nutzen</li>
+            <li>Den Quellcode extrahieren, dekompilieren oder reverse-engineeren</li>
+            <li>Inhalte in eigenen Schulungen oder Publikationen verwenden ohne schriftliche Genehmigung</li>
+          </ul>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">5. Verfügbarkeit und Änderungen</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Wir bemühen uns um eine kontinuierliche Verfügbarkeit des Tools, können diese jedoch nicht garantieren. Wir behalten uns vor:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Das Tool jederzeit zu ändern, zu erweitern oder einzuschränken</li>
+            <li>Den Zugang vorübergehend oder dauerhaft einzustellen</li>
+            <li>Inhalte zu aktualisieren oder zu korrigieren</li>
+            <li>Diese Nutzungsbedingungen anzupassen</li>
+          </ul>
+          
+          <p style="margin-bottom: 16px;">
+            Bei wesentlichen Änderungen werden wir Sie über die Startseite des Tools informieren. Die Nutzung nach einer Änderung gilt als Zustimmung zu den neuen Bedingungen.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">6. Haftungsbeschränkung</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Die Nutzung des Tools erfolgt auf eigene Gefahr. Soweit gesetzlich zulässig, haften wir nicht für:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Schäden durch fehlerhafte oder unvollständige Inhalte</li>
+            <li>Datenverlust (z.B. durch Löschen des Browser-Caches)</li>
+            <li>Technische Störungen, Ausfälle oder Inkompatibilitäten</li>
+            <li>Schäden durch Missbrauch oder unsachgemäße Nutzung</li>
+            <li>Mittelbare Schäden oder Folgeschäden</li>
+          </ul>
+          
+          <p style="margin-bottom: 16px;">
+            Die Haftung für Vorsatz, grobe Fahrlässigkeit und bei Verletzung von Leben, Körper oder Gesundheit bleibt unberührt. Ebenso bleibt die Haftung nach dem Produkthaftungsgesetz unberührt.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">7. Pflichten der Nutzer</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Als Nutzer verpflichten Sie sich:
+          </p>
+          <ul style="margin: 0 0 16px 20px;">
+            <li>Das Tool nur für legale und bestimmungsgemäße Zwecke zu nutzen</li>
+            <li>Keine Manipulationsversuche oder Angriffe auf die Infrastruktur durchzuführen</li>
+            <li>Die im Tool erworbenen Kenntnisse verantwortungsvoll und im Rahmen Ihrer beruflichen Qualifikation anzuwenden</li>
+            <li>Bei Unsicherheiten in der praktischen Anwendung qualifizierte Kollegen oder Vorgesetzte zu konsultieren</li>
+          </ul>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">8. Externe Links</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Das Tool kann Links zu externen Websites Dritter enthalten (z.B. QR-Code-Generierung). Wir haben keinen Einfluss auf die Inhalte und Datenschutzpraktiken dieser Seiten und übernehmen dafür keine Verantwortung. Die Nutzung externer Links erfolgt auf eigene Gefahr.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">9. Salvatorische Klausel</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Sollten einzelne Bestimmungen dieser Nutzungsbedingungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen davon unberührt. Die unwirksame Bestimmung wird durch eine wirksame ersetzt, die dem wirtschaftlichen Zweck am nächsten kommt.
+          </p>
+          
+          <h3 style="color: #1f2937; margin: 24px 0 16px 0;">10. Anwendbares Recht</h3>
+          
+          <p style="margin-bottom: 16px;">
+            Es gilt ausschließlich das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand ist, soweit gesetzlich zulässig, Bergen (Oberbayern) bzw. das zuständige Gericht nach den gesetzlichen Vorschriften.
+          </p>
+          
+          <p style="margin-bottom: 16px;">
+            <strong>Stand:</strong> Januar 2025<br>
+            <strong>Kontakt:</strong> IpW GmbH, Angerer Str. 2, 83346 Bergen<br>
+            E-Mail: info@ipw-schulungen.de
+          </p>
+        </div>
+      `);
+      document.body.appendChild(modal);
+    }
+    
+    // Erstellt ein Modal für rechtliche Informationen
+    function createLegalModal(title, content) {
+      const modal = document.createElement('div');
+      modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 10000; overflow-y: auto; padding: 20px;';
+      
+      const modalContent = document.createElement('div');
+      modalContent.style.cssText = 'background: white; border-radius: 12px; padding: 32px; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative;';
+      
+      modalContent.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e5e7eb;">
+          <h2 style="margin: 0; color: #1f2937; font-size: 24px;">${title}</h2>
+          <button onclick="this.closest('div[style*=fixed]').remove();" style="background: none; border: none; font-size: 32px; color: #6b7280; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+        </div>
+        <div style="font-size: 14px; color: #374151;">
+          ${content}
+        </div>
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #e5e7eb; text-align: right;">
+          <button onclick="this.closest('div[style*=fixed]').remove();" style="padding: 10px 24px; background: #4F6BFF; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">Schließen</button>
+        </div>
+      `;
+      
+      modal.appendChild(modalContent);
+      
+      // Schließen bei Klick außerhalb
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.remove();
+        }
+      });
+      
+      return modal;
+    }
+    
     // Developer Mode: Shift+Klick auf Dev-Icon zeigt Reset-Option
     document.getElementById('dev-mode').addEventListener('click', function(e) {
       if (e.shiftKey) {
@@ -912,6 +1245,207 @@
         }
         
         return recommendations;
+      },
+      
+      // ========================================
+      // SPRINT 4: Meilensteine & Zertifizierung
+      // ========================================
+      
+      // Definitionen der Kompetenzstufen
+      MILESTONES: {
+        BRONZE: {
+          id: 'BRONZE',
+          label: 'Bronze-Niveau',
+          color: '#CD7C5D',
+          description: 'Grundlegende Analysefähigkeiten',
+          timeEstimate: '2 Zeitstunden (3 UE à 45min)',
+          criteria: {
+            uniqueCases: 20,
+            successRate: 60,
+            primaryErrorRate: null, // Keine Bedingung
+            compensationErrorRate: null,
+            advancedCases: 0,
+            mixedDisorders: 0
+          },
+          competenceText: 'Die Teilnehmerin hat grundlegende Kenntnisse in der systematischen Analyse von Blutgaswerten erworben. Sie kann anhand von pH-Wert, pCO₂ und HCO₃⁻ zwischen normalen Werten und den sechs Hauptkategorien der Säure-Basen-Störungen unterscheiden. Die Erfolgsquote von mindestens 60% dokumentiert grundlegende Analysefähigkeiten.'
+        },
+        SILVER: {
+          id: 'SILVER',
+          label: 'Silber-Niveau',
+          color: '#C0C0C0',
+          description: 'Vertiefte Kompensationsanalyse',
+          timeEstimate: '5-6 Zeitstunden (8 UE à 45min)',
+          criteria: {
+            uniqueCases: 50,
+            successRate: 70,
+            primaryErrorRate: 20, // Unter 20% Fehler bei Primärstörung
+            compensationErrorRate: null,
+            advancedCases: 20,
+            mixedDisorders: 0
+          },
+          competenceText: 'Die Teilnehmerin hat vertiefte Kenntnisse in der Blutgasanalyse mit Schwerpunkt auf Kompensationsmechanismen erworben. Sie kann neben der Primärstörung auch beurteilen, ob und in welchem Ausmaß der Körper kompensatorisch gegensteuert. Die Erfolgsquote von mindestens 70% bei gleichzeitig niedriger Fehlerrate bei der Primärstörung zeigt gefestigte Analysekompetenz.'
+        },
+        GOLD: {
+          id: 'GOLD',
+          label: 'Gold-Niveau',
+          color: '#4F6BFF',
+          description: 'Umfassende Expertise',
+          timeEstimate: '12-15 Zeitstunden (18 UE à 45min)',
+          criteria: {
+            uniqueCases: 80,
+            successRate: 80,
+            primaryErrorRate: 15, // Unter 15%
+            compensationErrorRate: 15, // Unter 15%
+            advancedCases: 40,
+            mixedDisorders: 15
+          },
+          competenceText: 'Die Teilnehmerin beherrscht die systematische Analyse von Blutgaswerten und kann Säure-Basen-Störungen sicher identifizieren, Kompensationsmechanismen einschätzen und gemischte Störungsbilder differenzieren. Sie kennt die relevante Pathophysiologie der außerklinischen Intensivpflege und kann aus BGA-Befunden pflegerische Handlungsnotwendigkeiten und Eskalationskriterien ableiten. Die dokumentierte Erfolgsquote belegt sichere Handlungskompetenz im Monitoring beatmeter Patienten.'
+        }
+      },
+      
+      // Evaluiert ob Meilensteine erreicht wurden
+      evaluateMilestones() {
+        const stats = this.getBasicStats();
+        const errorAnalysis = this.getErrorTypeAnalysis();
+        const performance = this.getPerformanceByDisorder();
+        
+        const results = {
+          currentLevel: null,
+          achieved: [],
+          nextLevel: null,
+          progress: {}
+        };
+        
+        // Zähle verschiedene bearbeitete Fälle
+        const uniqueCases = stats.uniqueCasesWorked;
+        
+        // Zähle Advanced-Fälle und gemischte Störungen
+        let advancedCount = 0;
+        let mixedCount = 0;
+        const processedCases = new Set();
+        
+        this.profile.attempts.forEach(attempt => {
+          if (!processedCases.has(attempt.caseId) && attempt.isCorrect) {
+            processedCases.add(attempt.caseId);
+            const caseObj = CASES.find(c => c.id === attempt.caseId);
+            if (caseObj) {
+              if (caseObj.mode === 'advanced') advancedCount++;
+              if (caseObj.primary === 'P_MIXED') mixedCount++;
+            }
+          }
+        });
+        
+        // Berechne Fehlerraten
+        const totalAttempts = this.profile.attempts.length;
+        const primaryErrorRate = totalAttempts > 0 ? Math.round((errorAnalysis.primaryErrors / totalAttempts) * 100) : 0;
+        const compensationErrorRate = totalAttempts > 0 ? Math.round((errorAnalysis.compensationErrors / totalAttempts) * 100) : 0;
+        
+        // Prüfe jede Stufe in aufsteigender Reihenfolge
+        const levels = ['BRONZE', 'SILVER', 'GOLD'];
+        
+        for (const levelId of levels) {
+          const milestone = this.MILESTONES[levelId];
+          const criteria = milestone.criteria;
+          
+          let achieved = true;
+          const progress = {};
+          
+          // Prüfe uniqueCases
+          progress.uniqueCases = {
+            current: uniqueCases,
+            required: criteria.uniqueCases,
+            met: uniqueCases >= criteria.uniqueCases
+          };
+          if (uniqueCases < criteria.uniqueCases) achieved = false;
+          
+          // Prüfe successRate
+          progress.successRate = {
+            current: stats.successRate,
+            required: criteria.successRate,
+            met: stats.successRate >= criteria.successRate
+          };
+          if (stats.successRate < criteria.successRate) achieved = false;
+          
+          // Prüfe primaryErrorRate (nur wenn Bedingung existiert)
+          if (criteria.primaryErrorRate !== null) {
+            progress.primaryErrorRate = {
+              current: primaryErrorRate,
+              required: criteria.primaryErrorRate,
+              met: primaryErrorRate < criteria.primaryErrorRate
+            };
+            if (primaryErrorRate >= criteria.primaryErrorRate) achieved = false;
+          }
+          
+          // Prüfe compensationErrorRate (nur wenn Bedingung existiert)
+          if (criteria.compensationErrorRate !== null) {
+            progress.compensationErrorRate = {
+              current: compensationErrorRate,
+              required: criteria.compensationErrorRate,
+              met: compensationErrorRate < criteria.compensationErrorRate
+            };
+            if (compensationErrorRate >= criteria.compensationErrorRate) achieved = false;
+          }
+          
+          // Prüfe advancedCases
+          if (criteria.advancedCases > 0) {
+            progress.advancedCases = {
+              current: advancedCount,
+              required: criteria.advancedCases,
+              met: advancedCount >= criteria.advancedCases
+            };
+            if (advancedCount < criteria.advancedCases) achieved = false;
+          }
+          
+          // Prüfe mixedDisorders
+          if (criteria.mixedDisorders > 0) {
+            progress.mixedDisorders = {
+              current: mixedCount,
+              required: criteria.mixedDisorders,
+              met: mixedCount >= criteria.mixedDisorders
+            };
+            if (mixedCount < criteria.mixedDisorders) achieved = false;
+          }
+          
+          // Speichere Fortschritt für diese Stufe
+          results.progress[levelId] = progress;
+          
+          if (achieved) {
+            results.achieved.push(levelId);
+            results.currentLevel = levelId;
+          } else {
+            // Nächste noch nicht erreichte Stufe
+            if (!results.nextLevel) {
+              results.nextLevel = levelId;
+            }
+            break; // Weitere Stufen können nicht erreicht sein
+          }
+        }
+        
+        return results;
+      },
+      
+      // Prüft ob gerade ein neuer Meilenstein erreicht wurde (seit letztem Check)
+      checkForNewMilestone() {
+        const currentEval = this.evaluateMilestones();
+        const lastAchieved = this.profile.lastAchievedMilestone || null;
+        
+        if (currentEval.currentLevel && currentEval.currentLevel !== lastAchieved) {
+          // Neuer Meilenstein erreicht!
+          this.profile.lastAchievedMilestone = currentEval.currentLevel;
+          this.profile.milestoneAchievedAt = new Date().toISOString();
+          this.save();
+          return currentEval.currentLevel;
+        }
+        
+        return null;
+      },
+      
+      // Generiert eine eindeutige Zertifikatsnummer
+      generateCertificateNumber(level) {
+        const year = new Date().getFullYear();
+        const timestamp = Date.now().toString(36).toUpperCase();
+        const random = Math.random().toString(36).substring(2, 6).toUpperCase();
+        return `BGA-${year}-${level}-${timestamp}${random}`;
       },
       
       // ========================================
@@ -1984,6 +2518,12 @@
         currentMode
       );
       
+      // Prüfe ob ein neuer Meilenstein erreicht wurde
+      const newMilestone = LearningManager.checkForNewMilestone();
+      if (newMilestone) {
+        showMilestoneAchievement(newMilestone);
+      }
+      
       // Aktualisiere Progress Badge
       updateProgressBadge();
       
@@ -2028,6 +2568,16 @@
     });
 
     window.onload = () => {
+      // Prüfe ob Validierungsanfrage in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const validateNumber = urlParams.get('validate');
+      
+      if (validateNumber) {
+        showValidationPage(validateNumber);
+        return; // Zeige nur Validierungsseite, nicht das normale Tool
+      }
+      
+      // Normales Tool-Loading
       // Initialisiere Learning Manager
       LearningManager.init();
       
@@ -2041,6 +2591,145 @@
       document.getElementById('stats-toggle-btn').addEventListener('click', toggleDashboard);
       document.getElementById('stats-close-btn').addEventListener('click', toggleDashboard);
     };
+    
+    // Zeigt die Validierungsseite für ein Zertifikat
+    function showValidationPage(certNumber) {
+      document.body.innerHTML = `
+        <style>
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+          }
+          .validation-card {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+          }
+          .validation-card h1 {
+            margin: 0 0 8px 0;
+            color: #1f2937;
+            font-size: 28px;
+          }
+          .validation-card .subtitle {
+            margin: 0 0 32px 0;
+            color: #6b7280;
+            font-size: 16px;
+          }
+          .cert-number {
+            background: #f3f4f6;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 24px 0;
+            color: #1f2937;
+          }
+          .validation-result {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+          }
+          .validation-result.valid {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            color: #065f46;
+          }
+          .validation-result.invalid {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            color: #991b1b;
+          }
+          .validation-result strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          .back-button {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 24px;
+            background: #4F6BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+          }
+          .back-button:hover {
+            background: #3d54cc;
+          }
+        </style>
+        <div class="validation-card">
+          <h1>🔍 Zertifikat-Validierung</h1>
+          <p class="subtitle">IpW GmbH – BGA-Trainer Pro</p>
+          
+          <div class="cert-number">${certNumber}</div>
+          
+          <div id="validation-result"></div>
+          
+          <a href="${window.location.pathname}" class="back-button">← Zurück zum BGA-Trainer</a>
+        </div>
+      `;
+      
+      // Validiere die Nummer
+      validateCertificateNumber(certNumber);
+    }
+    
+    // Validiert eine Zertifikatsnummer
+    function validateCertificateNumber(certNumber) {
+      const resultDiv = document.getElementById('validation-result');
+      
+      // Prüfe Format: BGA-YYYY-LEVEL-HASH
+      const pattern = /^BGA-(\d{4})-(BRONZE|SILVER|GOLD)-([A-Z0-9]+)$/;
+      const match = certNumber.match(pattern);
+      
+      if (!match) {
+        resultDiv.className = 'validation-result invalid';
+        resultDiv.innerHTML = `
+          <strong>❌ Ungültige Zertifikatsnummer</strong>
+          <p>Diese Zertifikatsnummer entspricht nicht dem erwarteten Format.</p>
+        `;
+        return;
+      }
+      
+      const year = match[1];
+      const level = match[2];
+      const currentYear = new Date().getFullYear();
+      
+      // Prüfe ob Jahr plausibel ist (nicht in Zukunft, nicht zu alt)
+      if (parseInt(year) > currentYear || parseInt(year) < 2024) {
+        resultDiv.className = 'validation-result invalid';
+        resultDiv.innerHTML = `
+          <strong>❌ Ungültige Zertifikatsnummer</strong>
+          <p>Das Jahr in dieser Zertifikatsnummer ist nicht plausibel.</p>
+        `;
+        return;
+      }
+      
+      // Zertifikat ist strukturell gültig
+      const levelLabels = {
+        'BRONZE': 'Bronze-Niveau',
+        'SILVER': 'Silber-Niveau',
+        'GOLD': 'Gold-Niveau'
+      };
+      
+      resultDiv.className = 'validation-result valid';
+      resultDiv.innerHTML = `
+        <strong>✓ Zertifikat gültig</strong>
+        <p>Dieses Zertifikat wurde ausgestellt für <strong>${levelLabels[level]}</strong> im Jahr <strong>${year}</strong>.</p>
+        <p style="margin-top: 12px; font-size: 14px;">Die Zertifikatsnummer ist authentisch und folgt dem offiziellen Format des BGA-Trainer Pro Systems der IpW GmbH.</p>
+      `;
+    }
     
     // Zeigt Willkommensnachricht mit Lernfortschritt
     function showWelcomeMessage() {
@@ -2129,6 +2818,9 @@
       
       let html = '';
       
+      // Sektion 0: Meilenstein-Fortschritt (NEUE SEKTION)
+      html += renderMilestoneProgress();
+      
       // Sektion 1: Übersicht
       html += renderOverviewSection(stats);
       
@@ -2148,6 +2840,119 @@
       html += renderRecommendations();
       
       container.innerHTML = html;
+    }
+    
+    // Rendert den Meilenstein-Fortschritt
+    function renderMilestoneProgress() {
+      const milestoneEval = LearningManager.evaluateMilestones();
+      const currentLevel = milestoneEval.currentLevel;
+      const nextLevel = milestoneEval.nextLevel;
+      
+      let html = '<div class="stats-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">';
+      html += '<h3 style="color: white;">🏆 Mein Lernfortschritt & Zertifizierung</h3>';
+      
+      if (currentLevel) {
+        const milestone = LearningManager.MILESTONES[currentLevel];
+        html += '<div style="background: rgba(255,255,255,0.2); padding: 16px; border-radius: 8px; margin-bottom: 16px;">';
+        html += `<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">`;
+        html += `<div style="width: 80px; height: 80px; border-radius: 50%; background: ${milestone.color}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.75rem; text-align: center; line-height: 1.2; flex-shrink: 0;">${milestone.label.replace('-', '<br>')}</div>`;
+        html += `<div style="flex: 1;">`;
+        html += `<div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 4px;">Gratulation! ${milestone.label} erreicht</div>`;
+        html += `<div style="font-size: 0.9rem; opacity: 0.95;">${milestone.description}</div>`;
+        html += `</div>`;
+        html += `</div>`;
+        html += `<button onclick="showCertificateModal('${currentLevel}')" class="btn btn-primary" style="width: 100%; background: white; color: #667eea; font-weight: 600; border: none; padding: 12px;">📄 Zertifikat herunterladen</button>`;
+        html += '</div>';
+      }
+      
+      if (nextLevel) {
+        const nextMilestone = LearningManager.MILESTONES[nextLevel];
+        const progress = milestoneEval.progress[nextLevel];
+        
+        html += '<div style="background: rgba(255,255,255,0.15); padding: 16px; border-radius: 8px;">';
+        html += `<div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Nächstes Ziel: ${nextMilestone.label}</div>`;
+        
+        // Zeige Fortschrittsbalken für jedes Kriterium
+        for (const key in progress) {
+          const criterion = progress[key];
+          if (!criterion) continue;
+          
+          let label = '';
+          if (key === 'uniqueCases') label = 'Verschiedene Fälle';
+          else if (key === 'successRate') label = 'Erfolgsquote';
+          else if (key === 'primaryErrorRate') label = 'Fehlerrate Primärstörung';
+          else if (key === 'compensationErrorRate') label = 'Fehlerrate Kompensation';
+          else if (key === 'advancedCases') label = 'Advanced-Fälle';
+          else if (key === 'mixedDisorders') label = 'Gemischte Störungen';
+          
+          const percentage = key.includes('ErrorRate') 
+            ? Math.max(0, Math.min(100, 100 - (criterion.current / criterion.required * 100)))
+            : Math.min(100, (criterion.current / criterion.required * 100));
+          
+          const displayValue = key.includes('Rate') 
+            ? `${criterion.current}%${key.includes('ErrorRate') ? ' (max ' + criterion.required + '%)' : ' (min ' + criterion.required + '%)'}`
+            : `${criterion.current}/${criterion.required}`;
+          
+          html += `<div style="margin-bottom: 12px;">`;
+          html += `<div style="display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.85rem;">`;
+          html += `<span>${label}</span>`;
+          html += `<span style="font-weight: 600;">${displayValue}</span>`;
+          html += `</div>`;
+          html += `<div class="progress-bar-container" style="background: rgba(255,255,255,0.3);">`;
+          html += `<div class="progress-bar ${criterion.met ? 'excellent' : 'needs-work'}" style="width: ${percentage}%">`;
+          if (percentage > 15) html += `${Math.round(percentage)}%`;
+          html += `</div>`;
+          html += `</div>`;
+          html += `</div>`;
+        }
+        
+        html += `<div style="margin-top: 12px; font-size: 0.85rem; opacity: 0.9;">Geschätzter Zeitaufwand für ${nextMilestone.label}: ${nextMilestone.timeEstimate}</div>`;
+        html += '</div>';
+      } else if (!currentLevel) {
+        // Noch kein Meilenstein erreicht, zeige Bronze-Fortschritt
+        const bronzeProgress = milestoneEval.progress['BRONZE'];
+        html += '<div style="background: rgba(255,255,255,0.15); padding: 16px; border-radius: 8px;">';
+        html += `<div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Dein erstes Ziel: Bronze-Niveau</div>`;
+        
+        for (const key in bronzeProgress) {
+          const criterion = bronzeProgress[key];
+          if (!criterion) continue;
+          
+          let label = '';
+          if (key === 'uniqueCases') label = 'Verschiedene Fälle';
+          else if (key === 'successRate') label = 'Erfolgsquote';
+          
+          const percentage = Math.min(100, (criterion.current / criterion.required * 100));
+          const displayValue = key.includes('Rate') 
+            ? `${criterion.current}% (min ${criterion.required}%)`
+            : `${criterion.current}/${criterion.required}`;
+          
+          html += `<div style="margin-bottom: 12px;">`;
+          html += `<div style="display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.85rem;">`;
+          html += `<span>${label}</span>`;
+          html += `<span style="font-weight: 600;">${displayValue}</span>`;
+          html += `</div>`;
+          html += `<div class="progress-bar-container" style="background: rgba(255,255,255,0.3);">`;
+          html += `<div class="progress-bar ${criterion.met ? 'excellent' : 'needs-work'}" style="width: ${percentage}%">`;
+          if (percentage > 15) html += `${Math.round(percentage)}%`;
+          html += `</div>`;
+          html += `</div>`;
+          html += `</div>`;
+        }
+        
+        html += `<div style="margin-top: 12px; font-size: 0.85rem; opacity: 0.9;">Geschätzter Zeitaufwand: 2 Zeitstunden (3 UE à 45min)</div>`;
+        html += '</div>';
+      } else {
+        // Gold erreicht, höchste Stufe
+        html += '<div style="background: rgba(255,255,255,0.2); padding: 16px; border-radius: 8px; text-align: center;">';
+        html += '<div style="font-size: 1.5rem; margin-bottom: 8px;">🎉</div>';
+        html += '<div style="font-size: 1.2rem; font-weight: 600;">Du hast die höchste Stufe erreicht!</div>';
+        html += '<div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.9;">Du beherrschst die BGA-Analyse auf Expertenniveau. Weiter so!</div>';
+        html += '</div>';
+      }
+      
+      html += '</div>';
+      return html;
     }
     
     // Rendert die Übersichts-Sektion
@@ -2379,7 +3184,528 @@
       return html;
     }
     
-    // Zeigt detaillierte Statistiken in einem Modal/Alert
+    // Zeigt das Modal zur Zertifikatsgenerierung
+    function showCertificateModal(level) {
+      const milestone = LearningManager.MILESTONES[level];
+      
+      // Erstelle Modal
+      const modal = document.createElement('div');
+      modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 10000;';
+      
+      const modalContent = document.createElement('div');
+      modalContent.style.cssText = 'background: white; border-radius: 12px; padding: 32px; max-width: 500px; width: 90%;';
+      
+      modalContent.innerHTML = `
+        <h2 style="margin: 0 0 8px 0; color: #1f2937;">Zertifikat generieren</h2>
+        <p style="margin: 0 0 24px 0; color: #6b7280; font-size: 0.95rem;">Sie haben das <strong>${milestone.label}</strong> erfolgreich erreicht!</p>
+        
+        <div style="margin-bottom: 24px;">
+          <label style="display: block; margin-bottom: 8px; font-weight: 500; color: #374151;">Ihr Name (wie er auf dem Zertifikat erscheinen soll)</label>
+          <input type="text" id="certificate-name-input" placeholder="Vorname Nachname" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 1rem; box-sizing: border-box;" />
+          <p style="margin: 8px 0 0 0; font-size: 0.75rem; color: #6b7280;">Ihr Name wird nicht gespeichert und dient nur zur Erstellung des PDF-Dokuments.</p>
+        </div>
+        
+        <div style="display: flex; gap: 12px;">
+          <button onclick="closeCertificateModal()" style="flex: 1; padding: 12px; background: #e5e7eb; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; color: #374151;">Abbrechen</button>
+          <button onclick="generateCertificatePDF('${level}')" style="flex: 1; padding: 12px; background: #4F6BFF; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; color: white;">Zertifikat erstellen</button>
+        </div>
+      `;
+      
+      modal.appendChild(modalContent);
+      modal.id = 'certificate-modal';
+      document.body.appendChild(modal);
+      
+      // Focus auf Eingabefeld
+      setTimeout(() => document.getElementById('certificate-name-input').focus(), 100);
+      
+      // Enter-Taste zum Generieren
+      document.getElementById('certificate-name-input').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') generateCertificatePDF(level);
+      });
+    }
+    
+    // Schließt das Zertifikats-Modal
+    function closeCertificateModal() {
+      const modal = document.getElementById('certificate-modal');
+      if (modal) modal.remove();
+    }
+    
+    // Generiert das PDF-Zertifikat
+    function generateCertificatePDF(level) {
+      const nameInput = document.getElementById('certificate-name-input');
+      const userName = nameInput.value.trim();
+      
+      if (!userName) {
+        alert('Bitte geben Sie Ihren Namen ein.');
+        nameInput.focus();
+        return;
+      }
+      
+      // Generiere Zertifikatsnummer
+      const certNumber = LearningManager.generateCertificateNumber(level);
+      
+      // Hole alle benötigten Daten
+      const milestone = LearningManager.MILESTONES[level];
+      const stats = LearningManager.getBasicStats();
+      const errorAnalysis = LearningManager.getErrorTypeAnalysis();
+      const milestoneEval = LearningManager.evaluateMilestones();
+      const progress = milestoneEval.progress[level];
+      
+      // Erstelle HTML für das Zertifikat
+      const certificateHTML = createCertificateHTML(userName, level, milestone, stats, errorAnalysis, progress, certNumber);
+      
+      // Öffne in neuem Fenster zum Drucken
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(certificateHTML);
+      printWindow.document.close();
+      
+      // Schließe Modal
+      closeCertificateModal();
+      
+      // Zeige Erfolgsbestätigung
+      setTimeout(() => {
+        alert('Zertifikat wurde in einem neuen Fenster geöffnet. Sie können es jetzt drucken oder als PDF speichern (Strg+P / Cmd+P).');
+      }, 500);
+    }
+    
+    // Erstellt das HTML für das Zertifikat (KOMPAKTE EINSEITIGE VERSION)
+    function createCertificateHTML(userName, level, milestone, stats, errorAnalysis, progress, certNumber) {
+      const today = new Date();
+      const dateStr = today.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      
+      // Berechne spezifische Werte
+      const uniqueCases = progress.uniqueCases.current;
+      const successRate = progress.successRate.current;
+      const primaryErrorRate = progress.primaryErrorRate ? progress.primaryErrorRate.current : null;
+      const compensationErrorRate = progress.compensationErrorRate ? progress.compensationErrorRate.current : null;
+      const advancedCases = progress.advancedCases ? progress.advancedCases.current : 0;
+      const mixedDisorders = progress.mixedDisorders ? progress.mixedDisorders.current : 0;
+      
+      // QR-Code generieren
+      const validationURL = window.location.origin + window.location.pathname + '?validate=' + certNumber;
+      const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent(validationURL)}`;
+      
+      // Kompakter Kompetenztext (max 2 Sätze)
+      let shortCompetenceText = '';
+      if (level === 'BRONZE') {
+        shortCompetenceText = 'Die Teilnehmerin kann anhand von pH-Wert, pCO₂ und HCO₃⁻ Säure-Basen-Störungen systematisch identifizieren und zwischen den Hauptkategorien unterscheiden.';
+      } else if (level === 'SILVER') {
+        shortCompetenceText = 'Die Teilnehmerin beherrscht die Analyse von Säure-Basen-Störungen und kann Kompensationsmechanismen sicher einschätzen.';
+      } else if (level === 'GOLD') {
+        shortCompetenceText = 'Die Teilnehmerin kann Säure-Basen-Störungen sicher identifizieren, Kompensationsmechanismen einschätzen, gemischte Störungsbilder differenzieren und aus BGA-Befunden pflegerische Handlungsnotwendigkeiten ableiten.';
+      }
+      
+      return `
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zertifikat - ${userName}</title>
+  <style>
+    @page {
+      margin: 1.5cm;
+      size: A4 portrait;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+      color: #1f2937;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-size: 11pt;
+    }
+    
+    .container {
+      position: relative;
+      min-height: 26cm;
+    }
+    
+    .watermark {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.03;
+      font-size: 180px;
+      font-weight: bold;
+      color: #4F6BFF;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #4F6BFF;
+    }
+    
+    .logo-section {
+      text-align: right;
+    }
+    
+    .logo-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #4F6BFF;
+      margin: 0;
+    }
+    
+    .subtitle {
+      font-size: 10px;
+      color: #6b7280;
+      margin: 2px 0 0 0;
+    }
+    
+    .title-section {
+      text-align: center;
+      margin: 15px 0;
+    }
+    
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 6px 0;
+      color: #1f2937;
+      letter-spacing: 0.5px;
+    }
+    
+    .subtitle-main {
+      font-size: 13px;
+      color: #6b7280;
+      margin: 0 0 12px 0;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: ${milestone.color};
+      color: white;
+      padding: 8px 28px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+    
+    .participant-name {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      margin: 15px 0 18px 0;
+      color: #1f2937;
+    }
+    
+    .achievement-box {
+      background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+      padding: 14px;
+      border-radius: 6px;
+      margin: 15px 0;
+      border-left: 4px solid #4F6BFF;
+    }
+    
+    .achievement-title {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 15px;
+      font-size: 11px;
+    }
+    
+    .stat-item {
+      padding: 4px 0;
+    }
+    
+    .stat-label {
+      color: #6b7280;
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+    
+    .stat-value {
+      font-weight: 600;
+      color: #1f2937;
+      font-size: 12px;
+    }
+    
+    .content-section {
+      margin: 15px 0;
+    }
+    
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      color: #1f2937;
+    }
+    
+    .topics-compact {
+      font-size: 10.5px;
+      line-height: 1.6;
+      color: #374151;
+    }
+    
+    .competence-text {
+      font-size: 11px;
+      line-height: 1.6;
+      margin: 12px 0;
+      text-align: justify;
+    }
+    
+    .methodology-inline {
+      font-size: 10px;
+      color: #6b7280;
+      font-style: italic;
+      margin-top: 6px;
+    }
+    
+    .footer-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-top: 15px;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1.5fr 0.8fr;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .footer-left, .footer-center, .footer-right {
+      font-size: 10px;
+    }
+    
+    .footer-center {
+      text-align: center;
+    }
+    
+    .footer-center strong {
+      font-size: 9px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    
+    .footer-center div {
+      margin: 1px 0;
+    }
+    
+    .footer-right {
+      text-align: right;
+    }
+    
+    .qr-code {
+      width: 70px;
+      height: 70px;
+      float: right;
+    }
+    
+    .qr-label {
+      clear: right;
+      font-size: 8px;
+      text-align: right;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+    
+    .disclaimer {
+      font-size: 8px;
+      color: #9ca3af;
+      line-height: 1.4;
+      text-align: center;
+      padding: 8px 0 0 0;
+      border-top: 1px solid #f3f4f6;
+    }
+    
+    .legal-inline {
+      font-size: 9px;
+      color: #6b7280;
+      line-height: 1.5;
+      padding: 10px;
+      background: #f9fafb;
+      border-left: 3px solid #4F6BFF;
+      margin: 12px 0;
+    }
+    
+    @media print {
+      body {
+        padding: 0;
+      }
+      .container {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="watermark">IpW</div>
+    
+    <div class="header">
+      <div style="font-size: 10px; color: #6b7280;">Bergen (Oberbayern), ${dateStr}</div>
+      <div class="logo-section">
+        <div class="logo-text">IpW</div>
+        <div class="subtitle">Institut für pflegerische Weiterbildung</div>
+      </div>
+    </div>
+    
+    <div class="title-section">
+      <h1 class="title">FORTBILDUNGSNACHWEIS</h1>
+      <p class="subtitle-main">Blutgasanalyse in der außerklinischen Intensivpflege</p>
+      <div class="badge">${milestone.label.toUpperCase()}</div>
+    </div>
+    
+    <div class="participant-name">${userName}</div>
+    
+    <div class="achievement-box">
+      <div class="achievement-title">Erfolgreich abgeschlossene Kompetenzstufe: ${milestone.label}</div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Fallszenarien</div>
+          <div class="stat-value">${uniqueCases} Fälle</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Erfolgsquote</div>
+          <div class="stat-value">${successRate}%</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Lernumfang</div>
+          <div class="stat-value">${milestone.timeEstimate}</div>
+        </div>
+        ${primaryErrorRate !== null ? `
+        <div class="stat-item">
+          <div class="stat-label">Fehler Primär</div>
+          <div class="stat-value">${primaryErrorRate}%</div>
+        </div>
+        ` : ''}
+        ${compensationErrorRate !== null ? `
+        <div class="stat-item">
+          <div class="stat-label">Fehler Komp.</div>
+          <div class="stat-value">${compensationErrorRate}%</div>
+        </div>
+        ` : ''}
+        ${advancedCases > 0 ? `
+        <div class="stat-item">
+          <div class="stat-label">Advanced</div>
+          <div class="stat-value">${advancedCases} Fälle</div>
+        </div>
+        ` : ''}
+        ${mixedDisorders > 0 ? `
+        <div class="stat-item">
+          <div class="stat-label">Gemischte</div>
+          <div class="stat-value">${mixedDisorders} Fälle</div>
+        </div>
+        ` : ''}
+      </div>
+      <div class="methodology-inline">Lernmethodik: Fallbasierte Analyse mit Feedback, adaptiver Spaced-Repetition und pathophysiologischen Erklärungen</div>
+    </div>
+    
+    <div class="content-section">
+      <div class="section-title">Fachliche Schwerpunkte & Klinische Anwendung</div>
+      <div class="topics-compact">
+        <strong>Kernthemen:</strong> Systematische BGA-Analyse • Säure-Basen-Störungen • Kompensationsmechanismen • COPD und Beatmungspflege • Metabolische Entgleisungen • Niereninsuffizienz • Monitoring und Eskalation • Notfallmanagement
+      </div>
+    </div>
+    
+    <div class="competence-text">
+      <strong>Kompetenzbeschreibung:</strong> ${shortCompetenceText} Die dokumentierte Erfolgsquote von mindestens ${milestone.criteria.successRate}% belegt ${level === 'BRONZE' ? 'grundlegende' : level === 'SILVER' ? 'gefestigte' : 'sichere'} Analysefähigkeiten im Monitoring beatmeter Patienten.
+    </div>
+    
+    <div class="legal-inline">
+      <strong>Hinweis:</strong> Digitale Fortbildung im Selbststudium. Inhalte orientiert an QPR ambulant und Qualitätsstandards der Beatmungspflege. Ergänzt praktische Einarbeitung, ersetzt keine gesetzlich vorgeschriebenen Weiterbildungen.
+    </div>
+    
+    <div class="footer-section">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <strong style="font-size: 11px;">Zertifikat-Nr:</strong><br/>
+          <span style="font-family: 'Courier New', monospace; font-size: 9px;">${certNumber}</span>
+        </div>
+        <div class="footer-center">
+          <strong>Ausgestellt durch</strong>
+          <div>IpW GmbH</div>
+          <div>BGA-Trainer Pro</div>
+          <div style="margin-top: 4px;">info@ipw-schulungen.de</div>
+          <div>www.ipw-schulungen.de</div>
+        </div>
+        <div class="footer-right">
+          <img src="${qrCodeURL}" alt="QR" class="qr-code" />
+          <div class="qr-label">Validierung:<br/>${window.location.hostname}/<br/>zertifikat-check</div>
+        </div>
+      </div>
+      <div class="disclaimer">
+        Fortbildungsnachweis im Selbststudium. Zeitangaben basieren auf Durchschnittswerten. Anerkennung liegt im Ermessen der jeweiligen Stelle.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+      `;
+    }
+    
+    // Zeigt eine Gratulation wenn ein neuer Meilenstein erreicht wurde
+    function showMilestoneAchievement(level) {
+      const milestone = LearningManager.MILESTONES[level];
+      
+      // Erstelle Overlay mit Animation
+      const overlay = document.createElement('div');
+      overlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 10000; animation: fadeIn 0.3s;';
+      
+      const card = document.createElement('div');
+      card.style.cssText = 'background: white; border-radius: 16px; padding: 48px; max-width: 500px; width: 90%; text-align: center; animation: slideUp 0.5s; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);';
+      
+      card.innerHTML = `
+        <style>
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+          }
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+          }
+        </style>
+        <div style="font-size: 64px; margin-bottom: 16px; animation: pulse 1s infinite;">🏆</div>
+        <h2 style="margin: 0 0 8px 0; font-size: 28px; color: #1f2937;">Gratulation!</h2>
+        <div style="width: 120px; height: 120px; margin: 20px auto; border-radius: 50%; background: ${milestone.color}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem; line-height: 1.3; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);">${milestone.label.replace('-', '<br>')}</div>
+        <p style="font-size: 18px; color: #4b5563; margin: 16px 0; font-weight: 500;">${milestone.description}</p>
+        <p style="font-size: 14px; color: #6b7280; margin: 16px 0;">${milestone.competenceText.substring(0, 150)}...</p>
+        <div style="margin-top: 32px; display: flex; gap: 12px;">
+          <button onclick="document.getElementById('milestone-overlay').remove();" style="flex: 1; padding: 14px; background: #e5e7eb; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 15px; color: #374151;">Später</button>
+          <button onclick="document.getElementById('milestone-overlay').remove(); toggleDashboard();" style="flex: 1; padding: 14px; background: #4F6BFF; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 15px; color: white;">Zertifikat erstellen</button>
+        </div>
+      `;
+      
+      overlay.appendChild(card);
+      overlay.id = 'milestone-overlay';
+      document.body.appendChild(overlay);
+      
+      // Auto-close nach 15 Sekunden wenn nicht interagiert
+      setTimeout(() => {
+        const stillThere = document.getElementById('milestone-overlay');
+        if (stillThere) stillThere.remove();
+      }, 15000);
+    }
+    
     function showDetailedStats() {
       const stats = LearningManager.getBasicStats();
       
