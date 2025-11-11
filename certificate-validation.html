@@ -166,12 +166,60 @@
         return;
       }
       
-      // Validiere Format: BGA-YYYYMMDD-HASH
-      const certPattern = /^BGA-\d{8}-[A-Z0-9]{8,}$/;
+      // Validiere Format: 
+      // Format 1: BGA-YYYY-LEVEL-HASH (z.B. BGA-2025-BRONZE-MHU2AFQNNNXW)
+      // Format 2: BGA-YYYYMMDD-HASH (z.B. BGA-20250111-A1B2C3D4)
+      const format1Pattern = /^BGA-(\d{4})-(BRONZE|SILVER|GOLD)-([A-Z0-9]{8,})$/;
+      const format2Pattern = /^BGA-(\d{8})-([A-Z0-9]{8,})$/;
       
-      if (certPattern.test(certNumber)) {
-        // Format ist gültig
-        const dateStr = certNumber.substring(4, 12); // Extrahiere Datum
+      const match1 = certNumber.match(format1Pattern);
+      const match2 = certNumber.match(format2Pattern);
+      
+      if (match1) {
+        // Format 1: BGA-YYYY-LEVEL-HASH
+        const year = match1[1];
+        const level = match1[2];
+        const hash = match1[3];
+        
+        const levelNames = {
+          'BRONZE': 'Bronze-Niveau',
+          'SILVER': 'Silber-Niveau',
+          'GOLD': 'Gold-Niveau'
+        };
+        
+        const levelColors = {
+          'BRONZE': '#cd7f32',
+          'SILVER': '#c0c0c0',
+          'GOLD': '#ffd700'
+        };
+        
+        resultDiv.innerHTML = `
+          <div class="status-icon">✅</div>
+          <h2 style="font-size: 20px; font-weight: 600; color: #059669;">
+            Zertifikat ist gültig
+          </h2>
+          <div class="cert-number">${certNumber}</div>
+          <p class="success-text" style="font-weight: 500;">
+            Dieses Zertifikat wurde offiziell durch das IpW BGA-Trainer Pro System ausgestellt.
+          </p>
+          <div style="margin-top: 20px; padding: 16px; background: #f9fafb; border-radius: 8px; text-align: left;">
+            <p style="font-size: 13px; color: #4b5563; margin: 5px 0;">
+              <strong>Ausstellungsjahr:</strong> ${year}
+            </p>
+            <p style="font-size: 13px; color: #4b5563; margin: 5px 0;">
+              <strong>Kompetenzstufe:</strong> <span style="color: ${levelColors[level]}; font-weight: 600;">${levelNames[level]}</span>
+            </p>
+            <p style="font-size: 13px; color: #4b5563; margin: 5px 0;">
+              <strong>Programmtyp:</strong> BGA-Trainer Pro
+            </p>
+            <p style="font-size: 13px; color: #4b5563; margin: 5px 0;">
+              <strong>Fachbereich:</strong> Blutgasanalyse in der außerklinischen Intensivpflege
+            </p>
+          </div>
+        `;
+      } else if (match2) {
+        // Format 2: BGA-YYYYMMDD-HASH
+        const dateStr = match2[1];
         const year = dateStr.substring(0, 4);
         const month = dateStr.substring(4, 6);
         const day = dateStr.substring(6, 8);
@@ -216,6 +264,13 @@
               <li>Zertifikatsnummer wurde falsch eingegeben</li>
               <li>QR-Code ist beschädigt oder unvollständig</li>
               <li>Zertifikat stammt nicht aus dem offiziellen System</li>
+            </ul>
+            <p style="font-size: 12px; color: #991b1b; margin: 15px 0 5px 0;">
+              <strong>Gültige Formate:</strong>
+            </p>
+            <ul style="font-size: 12px; color: #991b1b; margin: 5px 0 0 20px; list-style: none;">
+              <li>• <code>BGA-YYYY-LEVEL-HASH</code> (z.B. BGA-2025-BRONZE-MHU2AFQNNNXW)</li>
+              <li>• <code>BGA-YYYYMMDD-HASH</code> (z.B. BGA-20250111-A1B2C3D4)</li>
             </ul>
           </div>
         `;
