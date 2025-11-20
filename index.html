@@ -2178,6 +2178,446 @@
           nursing: 'Pflegerelevant: Medikamentenplan überprüfen und mit Angehörigen besprechen. Protonenpumpenhemmer SOFORT wieder ansetzen. Kontrolle auf Zeichen gastrointestinaler Blutung: Teerstuhl, Hämatemesis, Anämie-Zeichen wie Blässe oder Tachykardie. Stuhl auf okkultes Blut testen. Bei beatmeten Patienten ist die Stress-Ulkus-Prophylaxe essentiell und darf niemals vergessen werden. Medikamentendispenser für die Familie organisieren zur Vermeidung solcher Fehler. Regelmäßige Hämoglobin-Kontrollen bei Risikopatienten. Dies zeigt wie wichtig strukturierte Medikamentengabe und Schulung der Angehörigen sind.'
         }
       }
+      {
+        id: 61, mode: 'basic', complexity: 'Basis',
+        context: '8-jaehriges Kind mit Mukoviszidose, akute Verschlechterung der Lungenfunktion, zaehes Sekret.',
+        ph: 7.31, pco2: 58, hco3: 28, be: 2, laktat: 1.4, na: 138, cl: 102, k: 4.0, glukose: 110,
+        primary: 'RESP_ACI', comp_basic: 'PARTIAL', comp_advanced: 'MET_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei Mukoviszidose fuehrt zaehes Bronchialsekret zu Atemwegsverlegung und CO2-Retention. Die genetische Stoerung des CFTR-Kanals verhindert normale Sekretclearance.',
+          compensation: 'Teilweise metabolische Kompensation durch renale Bikarbonat-Retention. Bei Kindern verlaeuft die Kompensation langsamer als bei Erwachsenen.',
+          nursing: 'Intensivierte Inhalationstherapie mit hyperosmolaren Loesungen, Atemphysiotherapie, Sekretmobilisation. Bei Kindern mit CF: regelmaessige BGA-Kontrollen bei Infekten. Antibiotika nach Sputumkultur.'
+        }
+      },
+      {
+        id: 62, mode: 'basic', complexity: 'Basis',
+        context: 'Heimbeatmeter Patient, Stromausfall ueber 4 Stunden, manuelle Beatmung durch Pflegekraft mit Ambubeutel.',
+        ph: 7.28, pco2: 65, hco3: 29, be: 2, laktat: 1.8, na: 140, cl: 104, k: 4.2, glukose: 130,
+        primary: 'RESP_ACI', comp_basic: 'PARTIAL', comp_advanced: 'MET_PARTIAL',
+        explanation: {
+          pathophysiology: 'Manuelle Beatmung ueber Stunden ist physisch extrem anstrengend. Trotz Bemuehungen der Pflegekraft wird meist zu wenig Volumen appliziert, was zur CO2-Retention fuehrt. Das erhoehte Laktat zeigt die Stressreaktion.',
+          compensation: 'Beginnende metabolische Kompensation nach mehreren Stunden Hypoventilation. Das Bikarbonat steigt langsam an.',
+          nursing: 'Nach Wiederherstellung der Stromversorgung engmaschiges Monitoring. Notfallplan mit Familie evaluieren: Notstromaggregat organisieren, zweites Beatmungsgeraet mit Batterie als Backup. Schulung in effizienter manueller Beatmung wiederholen.'
+        }
+      },
+      {
+        id: 63, mode: 'basic', complexity: 'Basis',
+        context: '75-jaehriger Patient mit Pneumothorax rechts, ploetzliche Atemnot, einseitig abgeschwaechtes Atemgeraeusch.',
+        ph: 7.33, pco2: 52, hco3: 26, be: 0, laktat: 1.3, na: 139, cl: 105, k: 4.1, glukose: 105,
+        primary: 'RESP_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei Pneumothorax kollabiert die Lunge, die Gasaustauschflaeche reduziert sich massiv. Die verbliebene Lunge kann die Ventilation nicht vollstaendig kompensieren, CO2 akkumuliert.',
+          compensation: 'Keine Kompensation bei akutem Ereignis. Der Pneumothorax muss sofort behandelt werden.',
+          nursing: 'NOTFALL! Sauerstoff-Gabe, Oberkörperhochlagerung. Thoraxdrainage vorbereiten. Bei Spannungspneumothorax: Notfallpunktion. Vitalzeichen engmaschig ueberwachen. Nach Drainage: Atemexkursionen beidseits pruefen, Roentgen-Kontrolle.'
+        }
+      },
+      {
+        id: 64, mode: 'basic', complexity: 'Basis',
+        context: 'Fruehgeborenes 32. SSW, Atemnotsyndrom, erste Lebensstunde, Nasenfluegelatmen, Einziehungen.',
+        ph: 7.30, pco2: 56, hco3: 27, be: 0, laktat: 2.0, na: 138, cl: 103, k: 4.5, glukose: 80,
+        primary: 'RESP_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei Fruehgeborenen fehlt Surfactant, was zu Alveolenkollaps fuehrt. Die Lunge ist steif, die Atemarbeit massiv erhoeht. CO2 kann nicht ausreichend abgeatmet werden.',
+          compensation: 'Keine Kompensation in der ersten Lebensstunde. Das System ist noch nicht eingespielt.',
+          nursing: 'Surfactant-Gabe gemaess Protokoll, CPAP oder Beatmung. Waermeschutz kritisch bei Fruehgeborenen. Monitoring von SpO2, Herzfrequenz, Atemfrequenz. Minimal Handling. Eltern fruehzeitig einbeziehen und unterstuetzen.'
+        }
+      },
+      {
+        id: 65, mode: 'basic', complexity: 'Basis',
+        context: 'Patient mit Schlafapnoe-Syndrom ohne CPAP-Therapie, chronische Tagesmuedigkeit, Sekundenschlaf.',
+        ph: 7.37, pco2: 54, hco3: 30, be: 4, laktat: 1.0, na: 140, cl: 103, k: 4.0, glukose: 115,
+        primary: 'RESP_ACI', comp_basic: 'FULL', comp_advanced: 'MET_FULL',
+        explanation: {
+          pathophysiology: 'Bei obstruktiver Schlafapnoe kommt es nachts zu wiederholten Atempausen mit CO2-Anstieg. Ueber Wochen entsteht eine chronische Hyperkapnie. Der Koerper gewoehnt sich an hoehere CO2-Werte.',
+          compensation: 'Vollstaendige metabolische Kompensation. Die Nieren haben Zeit gehabt, Bikarbonat zu akkumulieren. Der pH ist wieder normalisiert trotz erhoehtem pCO2.',
+          nursing: 'CPAP-Therapie dringend einleiten. Schlaflabor-Untersuchung organisieren. Gewichtsreduktion bei Adipositas. Schlafhygiene schulen. Kardiovaskulaeres Risiko erklaeren: Apnoe erhoeht Herzinfarkt- und Schlaganfall-Risiko erheblich.'
+        }
+      },
+      {
+        id: 66, mode: 'basic', complexity: 'Basis',
+        context: 'Jugendlicher nach Drogenintoxikation mit Opiaten, Atemfrequenz 6 pro Minute, somnolent, enge Pupillen.',
+        ph: 7.20, pco2: 75, hco3: 26, be: 0, laktat: 1.5, na: 139, cl: 104, k: 4.2, glukose: 95,
+        primary: 'RESP_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Opiate daempfen das Atemzentrum im Hirnstamm massiv. Die Atemfrequenz faellt auf lebensbedrohlich niedrige Werte, CO2 akkumuliert schnell. Die Trias enge Pupillen, Atemdepression, Somnolenz ist klassisch.',
+          compensation: 'Keine Kompensation bei akuter Intoxikation. Dies ist ein medizinischer Notfall mit Erstickungsgefahr.',
+          nursing: 'NOTFALL! Naloxon intranasal oder intravenoes bereithalten und applizieren. Atemwege freihalten, Sauerstoff. Bei Atemstillstand: Beatmung. Nach Naloxon-Gabe engmaschig ueberwachen, da Wirkdauer kuerzer als Opiat-Wirkung. Wiederholungsgaben moeglich noetig.'
+        }
+      },
+      {
+        id: 67, mode: 'basic', complexity: 'Basis',
+        context: 'Schwangere 28. SSW mit Praeeklampsie, RR 170 zu 110, Kopfschmerzen, Augenflimmern, Proteinurie.',
+        ph: 7.46, pco2: 30, hco3: 21, be: -2, laktat: 0.8, na: 136, cl: 104, k: 3.8, glukose: 90,
+        primary: 'RESP_ALK', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei Praeeklampsie fuehren zerebrale Durchblutungsstoerungen zu Kopfschmerzen und reflektorischer Hyperventilation. Der stark erhoehte Blutdruck erhoeht das Risiko fuer Eklampsie mit Krampfanfaellen.',
+          compensation: 'Keine Kompensation bei akutem Geschehen. Die Praeeklampsie kann sich innerhalb von Stunden zur lebensbedrohlichen Eklampsie oder zum HELLP-Syndrom entwickeln.',
+          nursing: 'NOTFALL Geburtshilfe! Blutdrucksenkung mit Antihypertensiva, Magnesiumsulfat zur Krampfprophylaxe. Engmaschiges Monitoring von RR, Reflexen, fetaler Herzfrequenz. Bei Verschlechterung: Geburtseinleitung oder Sectio. Ruhige Umgebung, Lichtreize minimieren.'
+        }
+      },
+      {
+        id: 68, mode: 'basic', complexity: 'Basis',
+        context: 'Meningitis-Patient, Fieber 39.5 Grad C, Nackensteife, zunehmende Tachypnoe, Bewusstseinseinschraenkung.',
+        ph: 7.50, pco2: 28, hco3: 22, be: -1, laktat: 1.8, na: 135, cl: 105, k: 4.3, glukose: 145,
+        primary: 'RESP_ALK', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei bakterieller Meningitis fuehren Fieber und ZNS-Reizung zu Hyperventilation. Entzuendungsmediatoren stimulieren das Atemzentrum direkt. Das leicht erhoehte Laktat deutet auf systemische Entzuendungsreaktion hin.',
+          compensation: 'Keine Kompensation bei akuter ZNS-Infektion. Die Meningitis ist ein lebensbedrohlicher Notfall mit hoher Mortalitaet ohne Therapie.',
+          nursing: 'NOTFALL! Sofortige Liquorpunktion, dann Breitspektrum-Antibiotika ohne Zeitverzoegerung. Isolierung. Fiebersenkung. Neurologisches Monitoring: GCS, Pupillen, Nackensteife. Fluessigkeitsbilanz. Bei Krampfanfaellen: Antikonvulsiva. Kontaktpersonen-Prophylaxe organisieren.'
+        }
+      },
+      {
+        id: 69, mode: 'basic', complexity: 'Basis',
+        context: 'Kind nach Salicylat-Vergiftung durch Aspirin-Ueberdosis, Tinnitus, Schwindel, Hyperpnoe.',
+        ph: 7.48, pco2: 26, hco3: 19, be: -4, laktat: 1.2, na: 138, cl: 104, k: 3.9, glukose: 85,
+        primary: 'RESP_ALK', comp_basic: 'PARTIAL', comp_advanced: 'MET_PARTIAL',
+        explanation: {
+          pathophysiology: 'Salicylate stimulieren das Atemzentrum direkt und fuehren zu Hyperventilation. Gleichzeitig stoeren sie den Zellstoffwechsel, was zur metabolischen Azidose fuehrt. Der niedrige HCO3-Wert zeigt die beginnende metabolische Komponente. Im Verlauf kann sich eine gemischte Stoerung entwickeln.',
+          compensation: 'Teilweise metabolische Kompensation durch renale Bikarbonat-Ausscheidung bei der Alkalose, aber gleichzeitig beginnt die toxische metabolische Azidose.',
+          nursing: 'VERGIFTUNGS-NOTFALL! Giftnotruf kontaktieren. Aktivkohle wenn indiziert. Salicylat-Spiegel bestimmen. Forcierte alkalische Diurese zur Beschleunigung der Ausscheidung. Engmaschige BGA-Kontrollen, da sich das Bild zur schweren metabolischen Azidose entwickeln kann. Bei schwerem Verlauf: Haemodia lyse.'
+        }
+      },
+      {
+        id: 70, mode: 'basic', complexity: 'Basis',
+        context: 'Beatmeter Patient, Respirator-Fehlfunktion mit zu hoher eingestellter Atemfrequenz, Alarm ignoriert.',
+        ph: 7.54, pco2: 27, hco3: 23, be: 0, laktat: 0.8, na: 141, cl: 105, k: 3.9, glukose: 98,
+        primary: 'RESP_ALK', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei zu hoher Beatmungsfrequenz wird mehr CO2 abgeatmet als produziert. Dies ist eine iatrogene respiratorische Alkalose durch Beatmungsfehler.',
+          compensation: 'Keine Kompensation bei akuter Stoerung. Die zerebrale Vasokonstriktion bei niedrigem CO2 kann die Hirndurchblutung reduzieren und zu Bewusstseinseinschraenkungen fuehren.',
+          nursing: 'SOFORT Beatmungseinstellungen korrigieren! Atemfrequenz reduzieren auf physiologische Werte. Alarme niemals ignorieren, sondern Ursache klaeren. Dokumentation des Vorfalls. Schulung des Teams ueber korrekte Beatmungseinstellungen. Technische Pruefung des Geraetes.'
+        }
+      },
+      {
+        id: 71, mode: 'basic', complexity: 'Basis',
+        context: '14-jaehriger mit diabetischer Ketoazidose, Erbrechen seit gestern, Bauchschmerzen, BZ 480 mg pro dl, Aceton-Geruch.',
+        ph: 7.15, pco2: 25, hco3: 8, be: -17, laktat: 2.5, na: 135, cl: 98, k: 5.5, glukose: 480,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Insulinmangel fuehrt zur Lipolyse mit Ketonkoerper-Bildung und schwerer metabolischer Azidose. Die Hyperglykämie verursacht osmotische Diurese mit Elektrolytverlusten. Trotz Hyperkaliämie im Serum ist der Gesamt-Kalium-Koerper-Bestand erniedrigt.',
+          compensation: 'Teilweise respiratorische Kompensation durch Kussmaul-Atmung, aber insuffizient bei so schwerer Azidose. Bei Jugendlichen ist DKA haeufig Erstmanifestation oder durch Insulin-Non-Compliance.',
+          nursing: 'NOTFALL Diabetologie! Volumengabe mit NaCl 0.9 Prozent, Insulin-Perfusor niedrig dosiert. Kalium-Substitution nach Laborkontrolle, da bei Azidose-Korrektur Kalium in Zellen wandert und schwere Hypokaliaemie droht. Stuendliche BZ- und Elektrolyt-Kontrollen. Ursache klaeren: Infektion, Non-Compliance.'
+        }
+      },
+      {
+        id: 72, mode: 'basic', complexity: 'Basis',
+        context: 'Niereninsuffizienz-Patient, Dialyse seit 5 Tagen technisch ausgefallen, zunehme nde Uebelkeit, Schwaeche.',
+        ph: 7.28, pco2: 34, hco3: 15, be: -10, laktat: 1.6, na: 140, cl: 106, k: 5.8, glukose: 110,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei fehlender Dialyse akkumulieren Sauren kontinuierlich. Die Niere kann ihre Ausscheidungsfunktion nicht mehr wahrnehmen. Die Hyperkaliämie ist lebensbedrohlich und kann zu Herzrhythmus stoerungen fuehren.',
+          compensation: 'Teilweise respiratorische Kompensation durch Hyperventilation. Bei chronischer Niereninsuffizienz ist eine metabolische Azidose typisch, aber die 5-taegige Pause verschlimmert die Situation dramatisch.',
+          nursing: 'DRINGEND Dialyse organisieren! Bei Kalium ueber 6.0: EKG-Monitoring, Notfall-Massnahmen bereithalten wie Calcium intravenoes, Insulin plus Glukose. Fluessigkeits- und Kalium-Restriktion bis zur Dialyse. Bei technischen Dialyse-Problemen: Verlegung in anderes Zentrum erwaegen.'
+        }
+      },
+      {
+        id: 73, mode: 'basic', complexity: 'Basis',
+        context: 'Patient mit Colitis ulcerosa, massive waessrige Durchfaelle seit 3 Tagen, Exsikkose, Schwaeche.',
+        ph: 7.32, pco2: 36, hco3: 18, be: -6, laktat: 1.1, na: 136, cl: 112, k: 3.0, glukose: 90,
+        primary: 'MET_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei schwerer Colitis ulcerosa gehen ueber den Darm grosse Mengen bikarbonathaltiger Fluessigkeit verloren. Dies fuehrt zur hyperchloraemischen metabolischen Azidose. Die Hypokaliämie entsteht durch intestinale Verluste.',
+          compensation: 'Keine respiratorische Kompensation erkennbar. Die Stoerung entwickelt sich subakut ueber mehrere Tage.',
+          nursing: 'Volumengabe mit balancierten Elektrolytloesungen. Kalium-Substitution unter Monitoring. Colitis-Therapie intensivieren: Cortison, gegebenenfalls Biologika. Stuhlfrequenz dokumentieren. Perianale Hautpflege. Ernaehrungsberatung einschalten. Bei toxischem Megakolon: chirurgische Evaluation.'
+        }
+      },
+      {
+        id: 74, mode: 'basic', complexity: 'Basis',
+        context: 'Intensivpatient mit Verbrennung 40 Prozent Koerperoberflaeche, Schock, Oligurie, Haemokonzentration.',
+        ph: 7.25, pco2: 32, hco3: 13, be: -12, laktat: 5.5, na: 148, cl: 110, k: 5.2, glukose: 185,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei schweren Verbrennungen entsteht ein hypovolaemischer Schock durch massiven Fluessigkeitsverlust ins Gewebe. Die Gewebehypoxie fuehrt zu Laktat-Akkumulation. Die Hypernatriämie entsteht durch Wasserverlust, die Hyperglykämie durch Stressreaktion.',
+          compensation: 'Teilweise respiratorische Kompensation durch Hyperventilation, aber insuffizient bei so hohem Laktat. Dies ist ein lebensbedrohlicher Zustand.',
+          nursing: 'SCHWERSTVERLETZTER! Aggressive Volumengabe nach Parkland-Formel: 4 ml pro kg pro Prozent VKOF in ersten 24 Stunden. Haelfte in ersten 8 Stunden. Urin-Ausfuhr 0.5 bis 1 ml pro kg pro Stunde anstreben. Schmerztherapie, Wundversorgung, Ernaehrung frueh beginnen. Sepsis-Prophylaxe.'
+        }
+      },
+      {
+        id: 75, mode: 'basic', complexity: 'Basis',
+        context: 'Alkoholiker mit Leberzirrhose, massive Aszites, periphere Oedeme, Ikterus, zunehmend verwirrt.',
+        ph: 7.30, pco2: 35, hco3: 17, be: -8, laktat: 2.2, na: 128, cl: 98, k: 3.2, glukose: 85,
+        primary: 'MET_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei Leberzirrhose ist die Laktat-Clearance eingeschraenkt, SaurePu fferkapazitaet vermindert. Die Hyponatriämie entsteht durch Wasserretention trotz Natrium-Mangel. Die Verwirrtheit ist Zeichen der hepatischen Enzephalopathie durch Ammoniak-Akkumulation.',
+          compensation: 'Keine Kompensation erkennbar. Die Leber- und Nierenfunktion sind zu stark eingeschraenkt.',
+          nursing: 'Aszites-Punktion bei Atembeschwerden. Eiweiss-Substitution mit Albumin. Lactulose gegen Enzephalopathie. Vorsichtige Diurese, aber Cave Nierenversagen. Gerinnungsstatus pruefen vor Eingriffen. Alkoholabstinenz foerdern. Bei Ösophagusvarizen-Blutung: Notfall-Endoskopie.'
+        }
+      },
+      {
+        id: 76, mode: 'basic', complexity: 'Basis',
+        context: 'Saeugling mit angeborenem Herzfehler Fallot-Tetralogie, Zyanose, Gedeihstoerung, Belastungsdyspnoe.',
+        ph: 7.33, pco2: 34, hco3: 17, be: -7, laktat: 2.8, na: 138, cl: 104, k: 4.2, glukose: 95,
+        primary: 'MET_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei zyanotischen Herzfehlern wie Fallot-Tetralogie wird sauerstoffarmes Blut am Lungenkreislauf vorbei in den Koerperkreislauf geshuntet. Die chronische Hypoxie fuehrt zu metabolischer Azidose durch anaeroben Stoffwechsel. Das Laktat ist chronisch erhoeht.',
+          compensation: 'Keine Kompensation bei diesem schweren Vitium. Die Niere kann die chronische Azidose nicht vollstaendig ausgleichen.',
+          nursing: 'Kinderkardiologische Betreuung. Operative Korrektur planen. Bei hypoxaemischen Anfaellen: Knie-Ellenbogen-Lage, Sauerstoff, Morphin. Trinkmenge ueberwachen, Infektionsprophylaxe. Eltern schulen ueber Notfallverhalten. Endokarditis-Prophylaxe vor Eingriffen.'
+        }
+      },
+      {
+        id: 77, mode: 'basic', complexity: 'Basis',
+        context: 'Patient 3 Wochen nach Magenbypass-OP, persistierendes Erbrechen, kann keine Nahrung bei sich behalten.',
+        ph: 7.50, pco2: 45, hco3: 35, be: 9, laktat: 0.9, na: 139, cl: 95, k: 3.0, glukose: 100,
+        primary: 'MET_ALK', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Nach Magenbypass-OP kann eine Stenose oder Anastomosen-Striktur zu anhaltendem Erbrechen fuehren. Der Verlust von Magensaeure fuehrt zur metabolischen Alkalose. Die Hypochloraemie und Hypokaliämie sind typisch.',
+          compensation: 'Teilweise respiratorische Kompensation durch Hypoventilation. Das anhalten de Erbrechen ueber Wochen erlaubt der Niere Zeit zur Anpassung.',
+          nursing: 'Endoskopie zur Ursachenklaerung organisieren. Volumengabe mit NaCl 0.9 Prozent. Kalium-Substitution unter EKG-Monitoring. Antiemetika. Bei mechanischem Hindernis: operative Revision. Ernaehrungsberatung, eventuell parenterale Ernaehrung ueberbrueckend. PPI reduzieren Saeureverlust.'
+        }
+      },
+      {
+        id: 78, mode: 'basic', complexity: 'Basis',
+        context: 'Intensivpatient mit dekompensierter Herzinsuffizienz, unter hochdosierter Furosemid-Dauerinfusion, Tagesdiurese 4 Liter.',
+        ph: 7.49, pco2: 44, hco3: 33, be: 7, laktat: 1.0, na: 138, cl: 96, k: 2.8, glukose: 105,
+        primary: 'MET_ALK', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Hochdosierte Schleifendiuretika fuehren zu massivem Chlorid- und Kalium-Verlust ueber die Niere. Die Kontraktions-Alkalose durch Volumenmangel verstaerkt die metabolische Alkalose. Die Hypokaliämie erhoeht Arrhythmie-Risiko.',
+          compensation: 'Teilweise respiratorische Kompensation durch Hypoventilation. Bei Herzinsuffizienz-Patienten muss die Kompensation vorsichtig interpretiert werden.',
+          nursing: 'Diuretika-Dosis evaluieren und gegebenenfalls reduzieren. Kalium-sparende Diuretika ergaenzen wie Spironolacton. Aggressive Kalium-Substitution, Ziel ueber 4.0 mmol pro Liter. Magnesium kontrollieren. Flue ssigkeitsbilanz taeglich. Gewichtskontrolle. EKG-Monitoring bei Hypokaliämie obligat.'
+        }
+      },
+      {
+        id: 79, mode: 'basic', complexity: 'Basis',
+        context: 'Conn-Syndrom diagnostiziert, primaerer Hyperaldosteronismus, therapierefraktaere Hypertonie, Muskelschwaeche in Beinen.',
+        ph: 7.48, pco2: 43, hco3: 31, be: 6, laktat: 0.8, na: 144, cl: 98, k: 2.4, glukose: 100,
+        primary: 'MET_ALK', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei Conn-Syndrom produziert ein Nebennieren-Adenom unkontrolliert Aldosteron. Dies fuehrt zu Natrium-Retention, Kalium-Ausscheidung und Wasserstoff-Ionen-Verlust. Die schwere Hypokaliämie unter 2.5 kann zu Laehmungen fuehren.',
+          compensation: 'Teilweise respiratorische Kompensation. Die Muskelschwaeche entsteht durch die ausgepragte Hypokaliämie, die die Muskelmembran-Potenziale stoert.',
+          nursing: 'Aldosteron-Antagonist Spironolacton als kausale Therapie. Kalium-Substitution hochdosiert, oft 80 bis 120 mmol pro Tag noetig. Blutdruck-Monitoring. Bei Hypokaliämie unter 2.5: kontinuierliche Kalium-Infusion ueber Perfusor, nie als Bolus. EKG-Monitoring. Nach Diagnose: operative Therapie bei Adenom planen.'
+        }
+      },
+      {
+        id: 80, mode: 'basic', complexity: 'Basis',
+        context: 'Saeugling 5 Wochen alt mit kongenitaler Pylorusstenose, Schwall-Erbrechen nach jeder Mahlzeit, eingefallene Fontanelle.',
+        ph: 7.53, pco2: 46, hco3: 38, be: 12, laktat: 1.4, na: 136, cl: 88, k: 3.1, glukose: 75,
+        primary: 'MET_ALK', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Die hypertrophe Pylorusstenose fuehrt zu Magenausgangs-Stenose. Das Kind erbricht nach jeder Mahlzeit im Schwall, verliert dabei Magensaeure. Die klassische hypochloraemische hypokaliaemische metabolische Alkalose entsteht. Die Hypochloraemie von 88 ist ausgepraegt.',
+          compensation: 'Teilweise respiratorische Kompensation. Bei Saeuglingen ist die Kompensationsfaehigkeit noch eingeschraenkt.',
+          nursing: 'KINDERCHIRURGISCHER NOTFALL! Praeoperative Stabilisierung obligat mit Volumengabe NaCl 0.9 Prozent und Kalium. Magensonde legen. Glukose-haltige Infusionen wegen Hypoglykämie-Risiko. Elektrolyte korrigieren vor OP. Nach Pyloromyotomie: Prognose exzellent. Eltern begleiten und aufklaeren.'
+        }
+      },
+      {
+        id: 81, mode: 'advanced', complexity: 'Advanced',
+        context: 'Heimbeatmetes Kind mit spinaler Muskelatrophie Typ 1, akute Bronchitis, vermehrt Sekret, SpO2 faellt ab.',
+        ph: 7.26, pco2: 68, hco3: 30, be: 3, laktat: 1.9, na: 138, cl: 102, k: 4.0, glukose: 115,
+        primary: 'RESP_ACI', comp_basic: 'PARTIAL', comp_advanced: 'MET_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei SMA Typ 1 ist die Atemmuskulatur progredient geschwaecht. Bei Infekten kann die vermehrte Sekretproduktion nicht ausreichend abgehustet werden. Die Atemwegsverlegung fuehrt zur akuten CO2-Retention auf chronisch erhoehtem Niveau. Dies ist eine haeufige Todesursache bei SMA.',
+          compensation: 'Teilweise metabolische Kompensation durch die chronische Grundsituation. Die akute Verschlechterung zeigt sich im niedrigen pH trotz erhoehtem Bikarbonat.',
+          nursing: 'Intensivierung der Sekretmobilisation: Inhalationen, mechanische Hustenhilfe Cough-Assist, endotracheales Absaugen. Antibiotika bei bakterieller Superinfektion. Beatmungsunterstützung anpassen, eventuell Druck oder Frequenz erhoehen. Bei Verschlechterung: Klinikeinweisung erwaegen. Familie eng einbinden.'
+        }
+      },
+      {
+        id: 82, mode: 'advanced', complexity: 'Advanced',
+        context: 'Patient mit Muskeldystrophie Duchenne, respiratorische Dekompensation, NIV reicht nicht mehr aus, Erschoepfung.',
+        ph: 7.24, pco2: 72, hco3: 32, be: 4, laktat: 2.1, na: 139, cl: 103, k: 4.1, glukose: 120,
+        primary: 'RESP_ACI', comp_basic: 'PARTIAL', comp_advanced: 'MET_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei Muskeldystrophie Duchenne kommt es im Verlauf zur progredienten Schwaeche der Atemmuskulatur und Zwerchfells. Im Endstadium reicht nicht-invasive Beatmung nicht mehr aus. Die CO2-Retention ist Zeichen der terminalen respiratorischen Insuffizienz.',
+          compensation: 'Teilweise metabolische Kompensation, aber insuffizient bei akuter Dekompensation. Dies ist oft der Zeitpunkt fuer Entscheidungen ueber invasive Beatmung oder palliative Betreuung.',
+          nursing: 'Palliativmedizinische Beratung einschalten. Beatmungsoptionen mit Patient und Familie besprechen: Tracheotomie mit invasiver Beatmung versus palliative Symptomkontrolle. Bei Entscheidung fuer Palliation: Morphin zur Dyspnoe-Linderung, Anxiolyse. Wuerdevolle Begleitung. Psychosoziale Unterstuetzung fuer Familie.'
+        }
+      },
+      {
+        id: 83, mode: 'advanced', complexity: 'Advanced',
+        context: 'Ausserklinische Beatmung, Trachealkanuele disloziert waehrend Lagerung, Reanimation ueber 5 Minuten, jetzt ROSC.',
+        ph: 7.18, pco2: 78, hco3: 28, be: 1, laktat: 4.5, na: 138, cl: 104, k: 5.2, glukose: 185,
+        primary: 'RESP_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei dislozierter Trachealkanuele ist die Beatmung komplett unterbrochen. Innerhalb von Minuten steigt das CO2 dramatisch an, Sauerstoff faellt ab. Die Reanimation fuehrt zur Laktat-Akkumulation durch anaeroben Stoffwechsel. Dies ist ein Worst-Case-Szenario in der Heimbeatmung.',
+          compensation: 'Keine Kompensation bei akutem Notfall. Das erhoe hte Bikarbonat stammt aus der chronischen Vorsituation. Die Prognose nach prolongierter Hypoxie ist oft schlecht.',
+          nursing: 'Nach Reanimation: Intensivstation zur Post-Reanimations-Behandlung. Hypothermie-Protokoll erwägen bei prolongierter Reanimation. Beatmung optimieren. Neuro-Monitoring wegen hypoxischem Hirnschaden. Analyse des Vorfalls: War Kanuele korrekt fixiert? Schulungsbedarf? Notfallplan mit Familie ueberarbeiten. Dies zeigt: Tracheostoma-Versorgung ist komplex!'
+        }
+      },
+      {
+        id: 84, mode: 'advanced', complexity: 'Advanced',
+        context: 'Status asthmaticus trotz maximaler Therapie, Patient erschoepft, SpO2 88 Prozent, Silent Chest, drohende Intubation.',
+        ph: 7.19, pco2: 75, hco3: 26, be: -1, laktat: 2.8, na: 139, cl: 105, k: 3.6, glukose: 165,
+        primary: 'RESP_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Im Status asthmaticus ist die Bronchialobstruktion so massiv, dass kaum noch Luft bewegt wird Silent Chest. Der Patient ist erschoepft, die Atemmuskulatur versagt. Der Anstieg des pCO2 ueber 60 bei Asthma ist ein Alarmzeichen fuer drohende Atemerschoepfung und Intubations-Indikation.',
+          compensation: 'Keine Kompensation bei akuter lebensbedrohlicher Situation. Die fehlende Hyperventilation trotz Hypoxie zeigt die Erschoepfung.',
+          nursing: 'HOECHSTE NOTFALLSTUFE! Intubationsbereitschaft herstellen. Hochdosierte Systemische Kortikosteroide, kontinuierliche Beta-2-Mimetika-Verneblung, Magnesium intravenoes, Adrenalin-Verneblung. Bei Intubation: hohe Sedierung noetig, Beatmung schwierig wegen hoher Atemwegs-Widerstände. Permissive Hyperkapnie akzeptieren.'
+        }
+      },
+      {
+        id: 85, mode: 'advanced', complexity: 'Advanced',
+        context: 'Schwere ARDS bei COVID-19-Pneumonie, beatmet mit PEEP 14, FiO2 0.8, Bauchlage durchgefuehrt.',
+        ph: 7.30, pco2: 52, hco3: 24, be: -2, laktat: 2.4, na: 142, cl: 106, k: 4.2, glukose: 160,
+        primary: 'RESP_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei ARDS ist die Lunge durch diffusen Alveolarschaden massiv geschaedigt. Die Compliance ist extrem reduziert, Gasaustausch dramatisch eingeschraenkt. Trotz hohem PEEP und FiO2 ist die Oxygenierung oft unzureichend. Permissive Hyperkapnie wird akzeptiert um Beatmungs-Trauma zu minimieren.',
+          compensation: 'Keine Kompensation bei akutem ARDS. Das leicht erhoehte Laktat deutet auf Gewebehypoxie trotz maximaler Therapie hin.',
+          nursing: 'Lungenprotektive Beatmung: Tidalvolumen 6 ml pro kg, Plateaudruck unter 30 cm H2O. Bauchlage regelmaessig wiederholen, verbessert Oxygenierung. Minimal Handling, strikte Infektionskontrolle. Tiefe Sedierung oft noetig. Ernaehrung frueh beginnen. ECMO erwägen bei refraktärer Hypoxie. Prognose bei schwerem COVID-ARDS: 30 bis 50 Prozent Mortalität.'
+        }
+      },
+      {
+        id: 86, mode: 'advanced', complexity: 'Advanced',
+        context: 'Fruehgeborenes 26. SSW, bronchopulmonale Dysplasie entwickelt, chronisch sauerstoffpflichtig, Heimbeatmung.',
+        ph: 7.38, pco2: 56, hco3: 32, be: 5, laktat: 1.1, na: 140, cl: 103, k: 4.0, glukose: 95,
+        primary: 'RESP_ACI', comp_basic: 'FULL', comp_advanced: 'MET_FULL',
+        explanation: {
+          pathophysiology: 'Bronchopulmonale Dysplasie entsteht nach langer Beatmung und Sauerstofftherapie bei Fruehgeborenen. Die Lunge ist chronisch geschaedigt mit Fibrose und eingeschraenkter Gasaustauschflaeche. Ein erhoehtes pCO2 ist bei BPD normal und wird toleriert.',
+          compensation: 'Vollstaendige metabolische Kompensation. Der Koerper hat sich an das chronisch erhoehte CO2 angepasst, der pH ist normalisiert. Dies ist der neue Steady State fuer dieses Kind.',
+          nursing: 'Chronisches Monitoring zu Hause: SpO2-Ziel 90 bis 95 Prozent, nicht hoeher wegen Retinopathie-Risiko. Regelmaessige paediatrisch-pneumologische Kontrollen. Impfungen besonders wichtig, vor allem RSV-Prophylaxe. Wachstum und Entwicklung foerdern. Viele Kinder mit BPD erholen sich im Verlauf, brauchen aber Jahre.'
+        }
+      },
+      {
+        id: 87, mode: 'advanced', complexity: 'Advanced',
+        context: 'Sepsis mit ARDS, beatmet, hochfrequente Oszillations-Beatmung, instabiler Kreislauf, drei Katecholamine.',
+        ph: 7.15, pco2: 42, hco3: 14, be: -12, laktat: 8.5, na: 138, cl: 104, k: 4.8, glukose: 220,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Septischer Schock mit ARDS ist eine der schwersten Intensivmedizin-Situationen. Die Mikrozirkulationsstoerung fuehrt zu massiver Gewebehypoxie mit extremer Laktat-Akkumulation. Laktat ueber 8 mmol pro Liter hat eine Mortalitaet von ueber 80 Prozent. Das ARDS verschlechtert die Situation zusaetzlich.',
+          compensation: 'Teilweise respiratorische Kompensation, aber bei ARDS ist die Lunge selbst eingeschraenkt. Dieser Patient steht an der Grenze zur Therapie-Refraktaritaet.',
+          nursing: 'Maximale Intensivtherapie: Sepsis-Bundle, Volumengabe, Noradrenalin als First-Line, eventuell Vasopressin und Adrenalin ergaenzen. Antibiotika-Eskalation, Fokus-Sanierung. Stuendliche Laktat-Kontrollen als Verlaufsparameter. ECMO als Ultima Ratio erwägen. Gespräch mit Familie ueber Prognose und Therapieziel-Aenderung.'
+        }
+      },
+      {
+        id: 88, mode: 'advanced', complexity: 'Advanced',
+        context: 'Polytrauma mit Crush-Syndrom nach Verschuettung, Myoglobin im Urin dunkelbraun, Kompartmentsyndrom Beine.',
+        ph: 7.20, pco2: 30, hco3: 11, be: -14, laktat: 6.2, na: 138, cl: 104, k: 6.5, glukose: 185,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei Crush-Syndrom werden durch Muskelzellzerfall massiv intrazellulaere Substanzen freigesetzt: Myoglobin nephrotoxisch, Kalium Arrhythmie-Risiko, Phosphat, Purine. Die Hyperurikaemie und Phosphat fuehren zur metabolischen Azidose. Die Hyperkaliaemie von 6.5 ist lebensbedrohlich.',
+          compensation: 'Teilweise respiratorische Kompensation, aber insuffizient bei so schwerer Azidose. Das Kompartmentsyndrom braucht sofortige chirurgische Fasziotomie.',
+          nursing: 'SCHWERSTVERLETZTER! Aggressive Volumengabe 10 bis 15 Liter pro Tag zur Ausschwemmung von Myoglobin. Urin-Alkalisierung mit Natriumbikarbonat. Hyperkaliaemie-Notfall: Calcium intravenoes, Insulin plus Glukose, Dialyse vorbereiten. Fasziotomie bei Kompartment. CK oft ueber 50.000 U pro Liter. Engmaschiges Monitoring. Akutes Nierenversagen droht.'
+        }
+      },
+      {
+        id: 89, mode: 'advanced', complexity: 'Advanced',
+        context: 'Methanol-Vergiftung nach Konsum von gepanschtem Alkohol, Sehstoerungen, Bewusstseinseinschraenkung.',
+        ph: 7.10, pco2: 24, hco3: 7, be: -18, laktat: 3.8, na: 138, cl: 98, k: 4.2, glukose: 105,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Methanol wird in der Leber zu Formaldehyd und Ameisensaeure abgebaut. Diese toxischen Metaboliten verursachen schwere metabolische Azidose mit erhoehter Anionenluecke. Die Ameisensaeure schaedigt den Nervus opticus irreversibel, fuehrt zu Erblindung. Die Sehstoerungen sind Notfall-Warnsignal.',
+          compensation: 'Teilweise respiratorische Kompensation, aber insuffizient bei so schwerer Vergiftung. Die osmotische Luecke ist erhoeht, diagnostisches Kriterium.',
+          nursing: 'VERGIFTUNGS-NOTFALL! Giftnotruf einschalten. Antidot: Fomepizol hemmt Alkoholdehydrogenase, verhindert toxische Metaboliten, oder Ethanol-Infusion alternativ. Haemodia lyse bei schwerer Vergiftung entfernt Methanol und Ameisensaeure. Volumengabe, Bikarbonat-Pufferung. Folsaeure-Gabe beschleunigt Ameisensaeure-Abbau. Ophthalmologie-Konsil wegen Erblindungs-Risiko.'
+        }
+      },
+      {
+        id: 90, mode: 'advanced', complexity: 'Advanced',
+        context: 'Neugeborenes 3. Lebenstag mit nekrotisierender Enterokolitis, gebl aehtes Abdomen, septischer Schock, blutige Stuehle.',
+        ph: 7.18, pco2: 28, hco3: 10, be: -15, laktat: 7.1, na: 135, cl: 100, k: 5.5, glukose: 180,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Die nekrotisierende Enterokolitis ist eine lebensbedrohliche Darmentzuendung bei Fruehgeborenen und kranken Neugeborenen. Darmwandnekrose fuehrt zu bakterieller Translokation und septischem Schock. Die massive Laktat-Akkumulation zeigt Gewebehypoxie und Schock. Mortalitaet 20 bis 30 Prozent.',
+          compensation: 'Teilweise respiratorische Kompensation, aber insuffizient bei so schwerem Schock. Dies ist ein neonatologischer Notfall hoechster Dringlichkeit.',
+          nursing: 'NOTFALL Neonatologie! Nahrungsstopp, Magensonde auf Ablauf. Breitspektrum-Antibiotika gegen Anaerobier. Volumengabe vorsichtig, Katecholamine. Roentgen-Abdomen: Pneumatosis intestinalis typisch. Bei Perforation oder Verschlechterung: Notfall-OP mit Darmresektion. Eltern-Begleitung, da sehr belastend.'
+        }
+      },
+      {
+        id: 91, mode: 'advanced', complexity: 'Advanced',
+        context: 'Intensivpatient, Nierenversagen plus Sepsis, Continuous Veno-Venous Hemofiltration laeuft, Laktat faellt nicht.',
+        ph: 7.25, pco2: 31, hco3: 13, be: -11, laktat: 5.9, na: 138, cl: 105, k: 4.8, glukose: 165,
+        primary: 'MET_ACI', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei kombiniertem Nierenversagen und Sepsis ist die Prognose schlecht. Trotz Nierenersatztherapie mit CVVH kann die Laktat-Clearance bei schwerem septischem Schock unzureichend sein. Die Mikrozirkulations stoerung ist so ausgepraegt, dass die Organe weiter Laktat produzieren.',
+          compensation: 'Teilweise respiratorische Kompensation. Das persistierend hohe Laktat trotz Dialyse ist prognostisch sehr unguenstig.',
+          nursing: 'Intensivierte Sepsis-Therapie: Antibiotika-Eskalation, Fokus-Sanierung. CVVH-Parameter optimieren, eventuell hoehere Flussraten. Haemodynamik stabilisieren mit Katecholaminen. Stuendliche Laktat-Kontrollen. Bei fehlendem Ansprechen nach 6 Stunden: Therapieziel-Gespraech mit Familie. Laktat ueber 4 trotz Therapie: schlechte Prognose.'
+        }
+      },
+      {
+        id: 92, mode: 'advanced', complexity: 'Advanced',
+        context: 'Kind mit Mitochondriopathie, chronische Laktatazidose, Gedeihstoerung, Entwicklungsverzoegerung, Muskelhypotonie.',
+        ph: 7.32, pco2: 33, hco3: 16, be: -8, laktat: 4.8, na: 137, cl: 106, k: 4.0, glukose: 95,
+        primary: 'MET_ACI', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei Mitochondriopathien ist die oxidative Phosphorylierung in den Mitochondrien gestoert. Die Zellen koennen Sauerstoff nicht effizient nutzen und fallen auf anaeroben Stoffwechsel zurueck. Dies fuehrt zur chronischen Laktat-Akkumulation trotz ausreichender Oxygenierung. Das Laktat um 4 bis 5 mmol pro Liter ist fuer diese Kinder typisch.',
+          compensation: 'Keine vollstaendige Kompensation. Der Koerper toleriert die chronische Azidose, aber der pH bleibt leicht erniedrigt.',
+          nursing: 'Paediatrisch-metabolische Betreuung. Spezielle Ernaehrung mit Keton-Koerpern oder MCT-Fetten. Vitamin-Supplementierung: Coenzym Q10, L-Carnitin, B-Vitamine. Infekte aggressiv behandeln, da Dekompensation droht. Physiotherapie, Fruehfoerderung. Eltern-Schulung ueber Stoffwechsel-Krisen. Prognose abhaengig von Typ, manche Formen schwer.'
+        }
+      },
+      {
+        id: 93, mode: 'advanced', complexity: 'Advanced',
+        context: 'Reanimation nach praeklin ischem Herzstillstand, Return of Spontaneous Circulation nach 15 Minuten, instabil.',
+        ph: 7.08, pco2: 55, hco3: 16, be: -12, laktat: 9.8, na: 145, cl: 115, k: 5.8, glukose: 285,
+        primary: 'P_MIXED', comp_basic: 'NONE', comp_advanced: 'C_MIXED',
+        explanation: {
+          pathophysiology: 'Nach prolongierter Reanimation liegt eine gemischte Azidose vor. Die respiratorische Komponente kommt durch unzureichende Beatmung waehrend CPR. Die metabolische Komponente durch anaeroben Stoffwechsel mit extremer Laktat-Akkumulation. Das Laktat von 9.8 zeigt die lange Hypoxie-Phase. Die Hyperglykämie ist Stressreaktion.',
+          compensation: 'Keine Kompensation moeglich bei akutem Kreislaufstillstand. Beide Regelsysteme sind ausgefallen. Dies ist eine der schwersten Azidosen mit pH unter 7.1.',
+          nursing: 'Post-Reanimations-Behandlung auf Intensivstation. Zieltemperatur-Management TTM mit Hypothermie 32 bis 36 Grad ueber 24 Stunden zur Neuroprotektion. Beatmung optimieren. Haemodynamik stabilisieren. Ursache des Herzstillstands suchen und behandeln. Neuro-Monitoring. Laktat-Clearance als prognostischer Marker. Familie informieren ueber unsichere Prognose.'
+        }
+      },
+      {
+        id: 94, mode: 'advanced', complexity: 'Advanced',
+        context: 'COPD-Patient mit Pneumonie und dekompensierter Herzinsuffizienz, Orthopnoe, periphere Oedeme, Zyanose.',
+        ph: 7.12, pco2: 68, hco3: 22, be: -6, laktat: 3.9, na: 130, cl: 95, k: 5.8, glukose: 160,
+        primary: 'P_MIXED', comp_basic: 'NONE', comp_advanced: 'C_MIXED',
+        explanation: {
+          pathophysiology: 'Dies ist eine klassische gemischte Azidose bei kritisch krankem COPD-Patienten. Die respiratorische Azidose durch COPD-Exazerbation plus Pneumonie. Die metabolische Azidose durch kardiale Dekompensation mit Gewebehypoxie. Die Hyponatriämie und Hyperkaliaemie verschlechtern die Prognose zusaetzlich.',
+          compensation: 'Keine Kompensation bei akuter Dekompensation beider Systeme. Dies ist ein Multiorganversagen mit sehr schlechter Prognose.',
+          nursing: 'INTENSIVSTATION! NIV oder Intubation. Antibiotika hochdosiert. Diurese zur Oedeme-Ausschwemmung. Katecholamine zur Kreislaufunterstuetzung. Elektrolyte korrigieren. Prognostisches Gespraech mit Patient und Familie ueber Therapieziel. Bei COPD-Endstadium: palliative Optionen besprechen. Multimorbide Patienten haben hohe Mortalitaet.'
+        }
+      },
+      {
+        id: 95, mode: 'advanced', complexity: 'Advanced',
+        context: 'Ausserklinische Beatmung, Aspiration von Nahrung, danach Fieber und Luftnot, Infiltrat im Roentgen.',
+        ph: 7.16, pco2: 58, hco3: 19, be: -8, laktat: 6.3, na: 136, cl: 102, k: 4.5, glukose: 175,
+        primary: 'P_MIXED', comp_basic: 'NONE', comp_advanced: 'C_MIXED',
+        explanation: {
+          pathophysiology: 'Nach Aspiration entwickelt sich eine Aspirations-Pneumonie mit ARDS-Komponente. Die Lungenfunktion verschlechtert sich, CO2 steigt. Gleichzeitig fuehrt die beginnende Sepsis zu metabolischer Azidose mit Laktat-Akkumulation. Dies ist eine haeufige Komplikation bei beatmeten Patienten mit Schluckstoerung.',
+          compensation: 'Keine Kompensation bei akuter gemischter Stoerung. Die respiratorische Komponente kann die metabolische nicht kompensieren, da die Lunge selbst betroffen ist.',
+          nursing: 'Klinikeinweisung zur Intensivtherapie. Beatmung optimieren, hoehere Druecke noetig. Antibiotika gegen Anaerobier und gramnegative Keime. Volumengabe, eventuell Katecholamine. Nach Stabilisierung: Aspirations-Prophylaxe ueberarbeiten. PEG-Anlage diskutieren bei rezidivierender Aspiration. Cuff-Druck optimal einstellen. Oberkörperhochlagerung.'
+        }
+      },
+      {
+        id: 96, mode: 'advanced', complexity: 'Advanced',
+        context: 'Kind 12 Jahre mit schwerem Asthma-Anfall, CO2-Retention trotz Therapie, plus akutes Nierenversagen durch Exsikkose.',
+        ph: 7.22, pco2: 62, hco3: 25, be: -2, laktat: 2.9, na: 145, cl: 108, k: 5.2, glukose: 130,
+        primary: 'RESP_ACI', comp_basic: 'PARTIAL', comp_advanced: 'MET_PARTIAL',
+        explanation: {
+          pathophysiology: 'Beim schweren Asthma-Anfall mit CO2-Retention ist das Kind erschoepft. Die Atemmuskulatur versagt trotz Beta-2-Mimetika. Durch das Erbrechen und verminderte Fluessigkeitsaufnahme entwickelt sich eine Exsikkose mit praerenale m Nierenversagen. Die Niere kann die respiratorische Azidose nicht kompensieren.',
+          compensation: 'Die Niere versucht zu kompensieren, ist aber durch das akute Nierenversagen eingeschraenkt. Das Bikarbonat ist grenzwertig normal.',
+          nursing: 'NOTFALL Paediatrie! Intensivierung der Asthma-Therapie: Systemisches Cortison, kontinuierliche Beta-2-Verneblung, Magnesium intravenoes. Volumengabe zur Rehydratation. Intubationsbereitschaft. Nach Stabilisierung: Asthma-Schulung, Therapieadhärenz pruefen. Nierenfunktion kontrollieren.'
+        }
+      },
+      {
+        id: 97, mode: 'advanced', complexity: 'Advanced',
+        context: 'Massivtransfusion nach Trauma, 15 Erythrozytenkonzentrate in 2 Stunden, zusaetzlich kardiogener Schock.',
+        ph: 7.48, pco2: 38, hco3: 28, be: 2, laktat: 4.2, na: 139, cl: 100, k: 3.4, glukose: 150,
+        primary: 'MET_ALK', comp_basic: 'NONE', comp_advanced: 'NONE',
+        explanation: {
+          pathophysiology: 'Bei Massivtransfusion wird viel Citrat infundiert, das in der Leber zu Bikarbonat verstoffwechselt wird, fuehrt zu metabolischer Alkalose. Gleichzeitig liegt ein Schock vor mit Laktat-Akkumulation von 4.2. Dies ist eine komplexe Situation: Alkalose durch Citrat trifft auf beginnende Azidose durch Schock. Das Laktat steigt trotz alkalischem pH.',
+          compensation: 'Keine Kompensation noetig, da pH alkalisch ist. Aber: Das hohe Laktat zeigt, dass sich bald eine metabolische Azidose entwickeln wird, wenn der Schock nicht beherrscht wird.',
+          nursing: 'Massivtransfusions-Protokoll: Ratio FFP zu EK 1 zu 1. Calcium-Substitution bei symptomatischer Hypokalzämie durch Citrat. Schock-Behandlung intensivieren: Volumengabe, Katecholamine, Blutungs-Kontrolle. Laktat-Kontrollen stuendlich. Gerinnung monitoren, Thrombozyten und Gerinnungsfaktoren substituieren. Hypothermie-Prophylaxe.'
+        }
+      },
+      {
+        id: 98, mode: 'advanced', complexity: 'Advanced',
+        context: 'Bartter-Syndrom diagnostiziert, genetische Tubulopathie, chronische Hypokaliämie, Polyurie, Wachstumsstoerung.',
+        ph: 7.50, pco2: 45, hco3: 35, be: 9, laktat: 0.9, na: 138, cl: 92, k: 2.5, glukose: 95,
+        primary: 'MET_ALK', comp_basic: 'PARTIAL', comp_advanced: 'RESP_PARTIAL',
+        explanation: {
+          pathophysiology: 'Beim Bartter-Syndrom ist der Natrium-Kalium-2-Chlorid-Kotransporter in der Henle-Schleife defekt. Dies fuehrt zu Salz- und Kalium-Verlust, sekundaerem Hyperaldosteronismus und metabolischer Alkalose. Die Hypokaliämie ist chronisch und schwer zu behandeln. Kinder zeigen Wachstumsstoerung.',
+          compensation: 'Teilweise respiratorische Kompensation. Dies ist eine chronische Stoerung, der Koerper hat sich teilweise adaptiert.',
+          nursing: 'Paediatrisch-nephrologische Langzeit-Betreuung. Hochdosierte Kalium-Supplementierung oral, oft 3 bis 5 mmol pro kg pro Tag. Zusaetzlich Magnesium. Kalium-sparende Diuretika wie Spironolacton. Prostaglandin-Synthese-Hemmer wie Indometacin reduzieren Polyurie. Regelmaessige Elektrolyt-Kontrollen. Wachstums-Monitoring.'
+        }
+      },
+      {
+        id: 99, mode: 'advanced', complexity: 'Advanced',
+        context: 'Intensivpatient nach intrazerebraler Blutung, therapeutische Hyperventilation plus iatrogene Bikarbonat-Gabe.',
+        ph: 7.56, pco2: 32, hco3: 28, be: 4, laktat: 1.2, na: 142, cl: 100, k: 3.8, glukose: 140,
+        primary: 'P_MIXED', comp_basic: 'NONE', comp_advanced: 'C_MIXED',
+        explanation: {
+          pathophysiology: 'Dies ist eine iatrogene gemischte Alkalose. Bei intrakranieller Blutung wurde der Patient therapeutisch hyperventiliert zur Senkung des Hirndrucks. Zusaetzlich wurde faelschlicherweise Bikarbonat gegeben. Beide Mechanismen treiben den pH nach oben. Eine gemischte Alkalose ist selten, aber bei iatroge nen Ursachen moeglich. pH ueber 7.55 ist gefaehrlich.',
+          compensation: 'Keine Kompensation moeglich, da beide Systeme in gleiche Richtung verschoben sind. Dies ist eine der schwersten Alkalosen.',
+          nursing: 'Beatmung anpassen, Hyperventilation reduzieren. KEINE weiteren Bikarbonat-Gaben. Chlorid-reiche Infusionen NaCl 0.9 Prozent. Bei pH ueber 7.6: Acetazolamid zur Bikarbonat-Ausscheidung. ICP-Monitoring, da zu starke Hyperventilation Hirndurchblutung gefaehrdet. Neurologisches Monitoring. Kalium substituieren. Schwere Alkalose kann Krampfanfaelle ausloesen.'
+        }
+      },
+      {
+        id: 100, mode: 'advanced', complexity: 'Advanced',
+        context: 'Heimbeatmetes Kind, NIV-Maske zu gross und falsch eingestellt, Aerophagie mit Voellegefuehl plus naechtliche Hypoventilation.',
+        ph: 7.42, pco2: 52, hco3: 34, be: 7, laktat: 1.3, na: 139, cl: 95, k: 3.2, glukose: 100,
+        primary: 'P_MIXED', comp_basic: 'PARTIAL', comp_advanced: 'PARTIAL',
+        explanation: {
+          pathophysiology: 'Bei schlecht sitzender NIV-Maske entstehen zwei Probleme: Erstens Luftschlucken Aerophagie mit Magenueberblaehung, Erbrechen, Magensaeure-Verlust und metabolischer Alkalose. Zweitens Leckagen mit unzureichender Ventilation und CO2-Retention. Dies ist ein klassisches Problem in der paediatrischen Heimbeatmung.',
+          compensation: 'Teilweise Kompensation beider Komponenten. Der pH ist noch im Normbereich, aber beide Parameter sind pathologisch verschoben.',
+          nursing: 'Masken-Anpassung durch Beatmungstherapeut: richtige Groesse, korrekter Sitz, Druck optimieren. Leckagen minimieren. Aerophagie reduzieren durch Druckreduktion wenn moeglich. Kleinere haeufigere Mahlzeiten. PPI erwägen. Beatmungseinstellungen ueberpruefen. Regelmaessige Kontrollen alle 3 bis 6 Monate. Kind waechst, Maske muss angepasst werden.'
+        }
+      }
     ];
 
     let currentIndex = 0;
